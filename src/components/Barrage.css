@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'MyCustomFont'; /* 给字体起一个名字 */
+    src: url("public/font/LXGWWenKaiMono-Regular.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.barrage {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 2.5rem; /* 适当增大字体 */
+    font-weight: bold;
+    font-family: 'MyCustomFont', sans-serif; /* 使用艺术手写字体 */
+
+    /* 金色烫金效果 */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5),
+    0 0 8px rgba(255, 215, 0, 0.8); /* 适当减少层数 */
+
+    /* 金榜题名渐变色 */
+    background: linear-gradient(90deg,
+    #ffcc00, #ffd700, #ffec8b, #ffdf00, #ffcc00
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s infinite linear, moveLeft 6s linear forwards;
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%) scale(1);
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-500%) scale(1);
+        opacity: 0;
+    }
+}
+
+/* 金光流动动画（减少频率 & 计算量） */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}

@@ -1,0 +1,8 @@
+.art-text h1 {
+    font-family: "Pacifico", cursive; /* 使用 Google Fonts 的手写字体 */
+    font-size: 4rem;
+    color: #ff6f61;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: 0;
+}
