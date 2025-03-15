@@ -25,9 +25,11 @@
     width: 100px;
     height: 2px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
-    transform: rotate(-45deg);  /* 角度调整，确保尾巴朝正确方向 */
-    left: -80px;
+    transform: rotate(-45deg);
+    top: 0;
+    left: 0;
     animation: meteorTail linear infinite;
+    animation-duration: inherit; /* 继承父元素的动画时长 */
 }
 
 /* 流星下落动画 */
@@ -45,11 +47,11 @@
 /* 流星尾巴的动画 */
 @keyframes meteorTail {
     from {
-        transform: translate(0, 0) rotate(-45deg);
+        transform: translate(0, 0) rotate(225deg);
         opacity: 1;
     }
     to {
-        transform: translate(100vw, 100vh) rotate(-45deg);  /* 确保尾巴跟着流星的轨迹 */
+        transform: translate(100vw, 100vh) rotate(225deg);  /* 确保尾巴跟着流星的轨迹 */
         opacity: 0;
     }
 }
