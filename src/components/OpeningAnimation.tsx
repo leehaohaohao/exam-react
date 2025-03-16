@@ -18,6 +18,13 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
         "愿你健康平安",
         "愿你笑口常开",
         "愿你幸福美满",
+        "愿你笑口常开",
+        "愿你幸福美满",
+        "愿你幸福美满",
+        "愿你笑口常开",
+        "愿你幸福美满",
+        "愿你笑口常开",
+        "愿你幸福美满",
     ];
     const rightTexts = [
         "愿你学业有成",
@@ -25,6 +32,13 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
         "愿你爱情甜蜜",
         "愿你财源广进",
         "愿你万事如意",
+        "愿你心事有理",
+        "愿你心事有理",
+        "愿你幸福美满",
+        "愿你笑口常开",
+        "愿你幸福美满",
+        "愿你笑口常开",
+        "愿你幸福美满",
     ];
 
     // 初始化竖条的文字和动画
@@ -37,6 +51,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideUp ${speed}s linear infinite`;
+                console.log(index)
             }
         });
 
@@ -45,6 +60,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideDown ${speed}s linear infinite`;
+                console.log(index)
             }
         });
     }, []);
@@ -53,40 +69,23 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
     const handleOpen = () => {
         setIsOpen(true);
         setShowButton(false); // 隐藏按钮
-
-        // 竖条回到正中间
-        const leftBars = leftBarsRef.current;
-        const rightBars = rightBarsRef.current;
-
-        leftBars.forEach((bar) => {
-            if (bar) {
-                bar.style.animation = "none";
-                bar.style.transition = "transform 1s ease-in-out";
-                bar.style.transform = "translateY(0)";
-            }
-        });
-
-        rightBars.forEach((bar) => {
-            if (bar) {
-                bar.style.animation = "none";
-                bar.style.transition = "transform 1s ease-in-out";
-                bar.style.transform = "translateY(0)";
-            }
-        });
-
-        // 左右两块区域分别向左右打开
+        // 等待竖条回到中间后再展开
         setTimeout(() => {
             const leftContainer = document.querySelector(".left-container") as HTMLElement;
             const rightContainer = document.querySelector(".right-container") as HTMLElement;
+
+            leftContainer.style.transition = "transform 1s ease-in-out";
+            rightContainer.style.transition = "transform 1s ease-in-out";
             leftContainer.style.transform = "translateX(-100%)";
             rightContainer.style.transform = "translateX(100%)";
-        }, 1000); // 1秒后开始打开
+        }, 1600); // 1.5秒回到中间 + 0.1秒停顿
 
         // 动画完成后调用回调函数
         setTimeout(() => {
             onComplete();
-        }, 2500); // 2.5秒后移除组件
+        }, 3200); // 2.5秒左右展开后移除组件
     };
+
 
     return (
         <div className={`opening-container ${isOpen ? "open" : ""}`}>
