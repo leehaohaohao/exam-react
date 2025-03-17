@@ -15,30 +15,26 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
     const leftTexts = [
         "愿你前程似锦",
         "愿你心想事成",
-        "愿你健康平安",
+        "愿你健康平安愿你学业有成愿你学业有成愿你学业有成愿你学业有成",
         "愿你笑口常开",
         "愿你幸福美满",
-        "愿你笑口常开",
-        "愿你幸福美满",
-        "愿你幸福美满",
-        "愿你笑口常开",
-        "愿你幸福美满",
-        "愿你笑口常开",
-        "愿你幸福美满",
+        "愿你永远年轻",
+        "愿你永远美丽愿你学业有成愿你学业有成愿你学业有成",
+        "愿你永远快乐",
+        "愿你永远幸福愿你学业有成愿你学业有成",
+        "愿你永远被爱",
     ];
     const rightTexts = [
-        "愿你学业有成",
-        "愿你事业辉煌",
+        "愿你学业有成愿你学业有成愿你学业有成愿你学业有成愿你学业有成愿你学业有成",
+        "愿你事业辉煌愿你学业有成愿你学业有成愿你学业有成愿你学业有成",
         "愿你爱情甜蜜",
         "愿你财源广进",
-        "愿你万事如意",
-        "愿你心事有理",
-        "愿你心事有理",
-        "愿你幸福美满",
-        "愿你笑口常开",
-        "愿你幸福美满",
-        "愿你笑口常开",
-        "愿你幸福美满",
+        "愿你万事如意愿你学业有成愿你学业有成愿你学业有成愿你学业有成",
+        "愿你永远被珍惜",
+        "愿你永远被呵护",
+        "愿你永远被宠爱",
+        "愿你永远被守护",
+        "愿你永远被祝福愿你学业有成",
     ];
 
     // 初始化竖条的文字和动画
@@ -51,7 +47,6 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideUp ${speed}s linear infinite`;
-                console.log(index)
             }
         });
 
@@ -60,7 +55,6 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideDown ${speed}s linear infinite`;
-                console.log(index)
             }
         });
     }, []);
@@ -83,9 +77,8 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
         // 动画完成后调用回调函数
         setTimeout(() => {
             onComplete();
-        }, 3200); // 2.5秒左右展开后移除组件
+        }, 1600); // 2.5秒左右展开后移除组件
     };
-
 
     return (
         <div className={`opening-container ${isOpen ? "open" : ""}`}>
@@ -130,7 +123,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
             {/* 圆形按钮 */}
             {showButton && (
                 <div className="circle-button" onClick={handleOpen}>
-                    <span>点击开幕</span>
+                    <span>点击开启<br />你的祝福</span>
                 </div>
             )}
         </div>

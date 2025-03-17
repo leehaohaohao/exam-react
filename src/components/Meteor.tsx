@@ -20,7 +20,7 @@ const Meteor: React.FC = () => {
     };
 
     // 生成多个流星
-    const meteors = Array.from({ length: 10 }, (_, index) => (
+    const meteors = Array.from({ length: 20 }, (_, index) => (
         <div
             key={index}
             className="meteor"
