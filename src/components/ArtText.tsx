@@ -3,13 +3,28 @@
  * @author lihao
  * @date 2025/3/13 22:43
  */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./ArtText.css";
+import logo from "../assets/logo1.png";
 
-const ArtText: React.FC = () => {
+interface ArtTextProps {
+    animate: boolean; // ✅ 控制动画是否播放
+}
+
+const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
+    const [playAnimation, setPlayAnimation] = useState<boolean>(false);
+
+    useEffect(() => {
+        if (animate) {
+            setPlayAnimation(true);
+        }
+    }, [animate]);
+
     return (
         <div className="art-text">
-            <h1>祝你考试顺利！</h1>
+            <div className="image-container">
+                <img src={logo} alt="透明背景图片" className={playAnimation ? "fade-in-bounce" : ""} />
+            </div>
         </div>
     );
 };

@@ -9,19 +9,21 @@ import OpeningAnimation from "./components/OpeningAnimation.tsx";
 
 const App = () => {
     const [showOpening, setShowOpening] = useState<boolean>(true);
+    const [showArtTextAnimation, setShowArtTextAnimation] = useState<boolean>(false);
 
     return (
         <>
-            {/* 其他组件 */}
-            <ArtText />
             <Barrage />
+            {/* ✅ 传递 showArtTextAnimation，控制 ArtText 动画播放 */}
+            <ArtText animate={showArtTextAnimation} />
+
             <Meteor />
             <EasterEgg />
 
-            {/* 遮罩层 */}
             {showOpening && (
                 <OpeningAnimation
-                    onComplete={() => setShowOpening(false)} // 动画完成后移除遮罩层
+                    onComplete={() => setShowOpening(false)}
+                    onStartArtText={() => setShowArtTextAnimation(true)} // ✅ 开幕式触发 ArtText 动画
                 />
             )}
         </>

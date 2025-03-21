@@ -8,11 +8,12 @@ import "./Barrage.css";
 import { Barrage } from "../define/types";
 
 const messages: string[] = [
-    "加油！你是最棒的！",
-    "相信自己，一定能行！",
-    "考试顺利，梦想成真！",
-    "祝你超常发挥！",
-    "放松心情，轻松应考！",
+    "美的不像话",
+    "亿点漂亮，亿点迷人",
+    "温柔善良，美若天仙",
+    "沉鱼落雁，闭月羞花，倾城倾国，国色天香",
+    "蒹葭苍苍，白露为霜。所谓伊人，在水一方",
+    "九天玄女",
 ];
 const BarrageComponent: React.FC = () => {
     const [barrages, setBarrages] = useState<Barrage[]>([]);

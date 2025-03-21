@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from "react";
 import "./OpeningAnimation.css";
 
 interface OpeningAnimationProps {
-    onComplete: () => void; // 开幕动画完成后的回调函数
+    onComplete: () => void; // 开幕动画完成后的回调
+    onStartArtText: () => void; // 立即触发 ArtText 动画
 }
 
-const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
+
+const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, onStartArtText }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [showButton, setShowButton] = useState<boolean>(true); // 控制按钮的显示
     const leftBarsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -63,6 +65,8 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete }) => {
     const handleOpen = () => {
         setIsOpen(true);
         setShowButton(false); // 隐藏按钮
+        // ✅ 立即触发 ArtText 动画
+        onStartArtText();
         // 等待竖条回到中间后再展开
         setTimeout(() => {
             const leftContainer = document.querySelector(".left-container") as HTMLElement;

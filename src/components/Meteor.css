@@ -1,3 +1,4 @@
+/* SVG容器 */
 .meteor-container {
     position: absolute;
     top: 0;
@@ -9,6 +10,7 @@
     pointer-events: none; /* 确保流星不会阻挡页面的其他交互 */
 }
 
+/* 流星 */
 .meteor {
     position: absolute;
     width: 2px;
@@ -54,18 +56,4 @@
         transform: translate(100vw, 100vh) rotate(225deg);  /* 确保尾巴跟着流星的轨迹 */
         opacity: 0;
     }
-}
-
-.meteor-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5rem;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    z-index: 20;
 }
