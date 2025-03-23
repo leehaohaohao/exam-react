@@ -1,0 +1,148 @@
+.gallery-wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.gallery-row {
+    width: 100%;
+    height: 32vh;
+    overflow: hidden;
+    display: flex;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 0.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.gallery-content {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0;
+    width: fit-content;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.gallery-item {
+    flex: 0 0 300px;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* 彩蛋卡片样式 */
+.easter-egg {
+    perspective: 1000px;
+    background: var(--egg-color);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.easter-egg.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: var(--egg-color);
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background: var(--egg-color);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #e91e63;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 隐藏滚动条但保持功能 */
+.gallery-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 添加光晕效果 */
+.gallery-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.gallery-item:hover::before {
+    opacity: 1;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card-front:hover .card-image,
+.card-back:hover .card-image {
+    transform: scale(1.05);
+}

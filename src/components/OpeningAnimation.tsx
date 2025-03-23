@@ -49,6 +49,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, onStart
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideUp ${speed}s linear infinite`;
+                console.log(index);
             }
         });
 
@@ -57,6 +58,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, onStart
             if (bar) {
                 const speed = 2 + Math.random() * 3; // 随机速度
                 bar.style.animation = `slideDown ${speed}s linear infinite`;
+                console.log(index);
             }
         });
     }, []);
