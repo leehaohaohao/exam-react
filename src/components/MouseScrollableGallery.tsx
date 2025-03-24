@@ -1,36 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import "./MouseScrollableGallery.css";
 
-// 彩蛋图片数据
-const easterEggs = [
-    {
-        front: "🎮 游戏机",
-        back: "🎲 骰子",
-        color: "#FFB6C1" // 浅粉色
-    },
-    {
-        front: "🎨 画笔",
-        back: "🎭 面具",
-        color: "#FFC0CB" // 粉红色
-    },
-    {
-        front: "🎸 吉他",
-        back: "🎹 钢琴",
-        color: "#FFE4E1" // 浅玫瑰色
-    },
-    {
-        front: "🌙 月亮",
-        back: "☀️ 太阳",
-        color: "#FFF0F5" // 薰衣草色
-    },
-    {
-        front: "🐱 猫咪",
-        back: "🐶 狗狗",
-        color: "#FFE4B5" // 浅橙色
-    }
-];
-
-// 预留图片数组接口
+// 图片数组接口
 interface GalleryImage {
     id: string;
     frontImage: string;
@@ -38,20 +9,281 @@ interface GalleryImage {
     color: string;
 }
 
-// 示例图片数组（到时候可以替换成实际的图片）
+// 自定义图片数组
 const galleryImages: GalleryImage[] = [
     {
         id: "1",
-        frontImage: "path/to/front1.jpg",
-        backImage: "path/to/back1.jpg",
-        color: "#FF6B6B"
+        frontImage: "/src/assets/Photo/compressed/2.jpg",
+        backImage: "/src/assets/back/1.jpg",
+        color: "#FFB6C1" // 浅粉色
     },
-    // ... 更多图片
+    {
+        id: "2",
+        frontImage: "/src/assets/Photo/compressed/3.jpg",
+        backImage: "/src/assets/back/2.jpg",
+        color: "#FFC0CB" // 粉红色
+    },
+    {
+        id: "3",
+        frontImage: "/src/assets/Photo/compressed/7.jpg",
+        backImage: "/src/assets/back/3.jpg",
+        color: "#FFE4E1" // 浅玫瑰色
+    },
+    {
+        id: "4",
+        frontImage: "/src/assets/Photo/compressed/8.jpg",
+        backImage: "/src/assets/back/4.jpg",
+        color: "#FFF0F5" // 薰衣草色
+    },
+    {
+        id: "5",
+        frontImage: "/src/assets/Photo/compressed/9.jpg",
+        backImage: "/src/assets/back/5.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "6",
+        frontImage: "/src/assets/Photo/compressed/10.jpg",
+        backImage: "/src/assets/Photo/compressed/2.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "7",
+        frontImage: "/src/assets/Photo/compressed/11.jpg",
+        backImage: "/src/assets/Photo/compressed/3.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "8",
+        frontImage: "/src/assets/Photo/compressed/12.jpg",
+        backImage: "/src/assets/Photo/compressed/3.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "9",
+        frontImage: "/src/assets/Photo/compressed/13.jpg",
+        backImage: "/src/assets/Photo/compressed/8.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "10",
+        frontImage: "/src/assets/Photo/compressed/14.jpg",
+        backImage: "/src/assets/Photo/compressed/9.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "11",
+        frontImage: "/src/assets/Photo/compressed/15.jpg",
+        backImage: "/src/assets/Photo/compressed/10.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "12",
+        frontImage: "/src/assets/Photo/compressed/16.jpg",
+        backImage: "/src/assets/Photo/compressed/11.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "13",
+        frontImage: "/src/assets/Photo/compressed/17.jpg",
+        backImage: "/src/assets/back/1.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "14",
+        frontImage: "/src/assets/Photo/compressed/19.jpg",
+        backImage: "/src/assets/Photo/compressed/5.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "15",
+        frontImage: "/src/assets/Photo/compressed/20.jpg",
+        backImage: "/src/assets/back/4.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "16",
+        frontImage: "/src/assets/Photo/compressed/22.jpg",
+        backImage: "/src/assets/back/2.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "17",
+        frontImage: "/src/assets/Photo/compressed/23.jpg",
+        backImage: "/src/assets/Photo/compressed/16.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "18",
+        frontImage: "/src/assets/Photo/compressed/25.jpg",
+        backImage: "/src/assets/Photo/compressed/17.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "19",
+        frontImage: "/src/assets/Photo/compressed/26.jpg",
+        backImage: "/src/assets/back/5.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "20",
+        frontImage: "/src/assets/Photo/compressed/27.jpg",
+        backImage: "/src/assets/Photo/compressed/20.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "21",
+        frontImage: "/src/assets/Photo/compressed/30.jpg",
+        backImage: "/src/assets/Photo/compressed/22.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "22",
+        frontImage: "/src/assets/Photo/compressed/31.jpg",
+        backImage: "/src/assets/Photo/compressed/23.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "23",
+        frontImage: "/src/assets/Photo/compressed/32.jpg",
+        backImage: "/src/assets/Photo/compressed/25.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "24",
+        frontImage: "/src/assets/Photo/compressed/34.jpg",
+        backImage: "/src/assets/Photo/compressed/26.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "25",
+        frontImage: "/src/assets/Photo/compressed/35.jpg",
+        backImage: "/src/assets/Photo/compressed/27.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "26",
+        frontImage: "/src/assets/Photo/compressed/36.jpg",
+        backImage: "/src/assets/Photo/compressed/30.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "27",
+        frontImage: "/src/assets/Photo/compressed/37.jpg",
+        backImage: "/src/assets/Photo/compressed/31.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "28",
+        frontImage: "/src/assets/Photo/compressed/38.jpg",
+        backImage: "/src/assets/Photo/compressed/32.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "29",
+        frontImage: "/src/assets/Photo/compressed/39.jpg",
+        backImage: "/src/assets/back/3.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "30",
+        frontImage: "/src/assets/Photo/compressed/40.jpg",
+        backImage: "/src/assets/Photo/compressed/35.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "31",
+        frontImage: "/src/assets/Photo/compressed/41.jpg",
+        backImage: "/src/assets/back/4.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "32",
+        frontImage: "/src/assets/Photo/compressed/42.jpg",
+        backImage: "/src/assets/Photo/compressed/37.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "33",
+        frontImage: "/src/assets/Photo/compressed/43.jpg",
+        backImage: "/src/assets/Photo/compressed/38.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "34",
+        frontImage: "/src/assets/Photo/compressed/44.jpg",
+        backImage: "/src/assets/Photo/compressed/39.jpg",
+        color: "#FFE4B5" // 浅橙色
+    },
+    {
+        id: "35",
+        frontImage: "/src/assets/Photo/compressed/45.jpg",
+        backImage: "/src/assets/Photo/compressed/40.jpg",
+        color: "#FFE4B5" // 浅橙色
+    }
 ];
 
 const MouseScrollableGallery: React.FC = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const [flippedItems, setFlippedItems] = useState<Set<string>>(new Set());
+    const [loadedImages, setLoadedImages] = useState<Set<string>>(new Set());
+    const [visibleImages, setVisibleImages] = useState<Set<string>>(new Set());
+
+    // 使用 Intersection Observer 来检测图片是否在视口中
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const imageId = entry.target.getAttribute('data-image-id');
+                        if (imageId) {
+                            setVisibleImages(prev => new Set([...prev, imageId]));
+                        }
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: '50px',
+                threshold: 0.1
+            }
+        );
+
+        const elements = document.querySelectorAll('.gallery-item');
+        elements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
+    // 优化后的图片加载逻辑
+    useEffect(() => {
+        const loadVisibleImages = async () => {
+            const imagePromises = Array.from(visibleImages)
+                .filter(id => !loadedImages.has(id))
+                .map(id => {
+                    const image = galleryImages.find(img => img.id === id);
+                    if (!image) return Promise.resolve();
+
+                    return new Promise((resolve, reject) => {
+                        const img = new Image();
+                        img.onload = () => {
+                            setLoadedImages(prev => new Set([...prev, id]));
+                            resolve(null);
+                        };
+                        img.onerror = reject;
+                        img.src = image.frontImage;
+                    });
+                });
+
+            try {
+                await Promise.all(imagePromises);
+            } catch (error) {
+                console.error('Error loading images:', error);
+            }
+        };
+
+        loadVisibleImages();
+    }, [visibleImages]);
 
     useEffect(() => {
         const container = containerRef.current;
@@ -66,26 +298,38 @@ const MouseScrollableGallery: React.FC = () => {
             content.style.transform = `translateX(${-totalWidth / 2}px)`;
         });
 
+        let animationFrameId: number;
+        let lastMouseX = 0;
+
         const handleMouseMove = (e: MouseEvent) => {
             const rect = container.getBoundingClientRect();
             const mouseX = e.clientX - rect.left;
             const containerWidth = rect.width;
             
-            const speeds = [1.2, 1.6, 2.0];
-            
-            rows.forEach((row, index) => {
-                const content = row.querySelector('.gallery-content') as HTMLElement;
-                if (!content) return;
+            // 使用 requestAnimationFrame 优化动画
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
 
-                const moveX = (1 - mouseX / containerWidth) * 600 * speeds[index];
-                const itemWidth = 300 + 24;
-                const totalWidth = content.scrollWidth;
+            animationFrameId = requestAnimationFrame(() => {
+                const speeds = [1.2, 1.6, 2.0];
                 
-                if (Math.abs(moveX) >= totalWidth / 2) {
-                    content.style.transform = `translateX(${-totalWidth / 2}px)`;
-                } else {
-                    content.style.transform = `translateX(${-totalWidth / 2 + moveX}px)`;
-                }
+                rows.forEach((row, index) => {
+                    const content = row.querySelector('.gallery-content') as HTMLElement;
+                    if (!content) return;
+
+                    const moveX = (1 - mouseX / containerWidth) * 600 * speeds[index];
+                    const itemWidth = 300 + 24;
+                    const totalWidth = content.scrollWidth;
+                    
+                    if (Math.abs(moveX) >= totalWidth / 2) {
+                        content.style.transform = `translateX(${-totalWidth / 2}px)`;
+                    } else {
+                        content.style.transform = `translateX(${-totalWidth / 2 + moveX}px)`;
+                    }
+                });
+
+                lastMouseX = mouseX;
             });
         };
 
@@ -93,6 +337,9 @@ const MouseScrollableGallery: React.FC = () => {
 
         return () => {
             container.removeEventListener('mousemove', handleMouseMove);
+            if (animationFrameId) {
+                cancelAnimationFrame(animationFrameId);
+            }
         };
     }, []);
 
@@ -109,33 +356,65 @@ const MouseScrollableGallery: React.FC = () => {
         });
     };
 
-    // 渲染图片卡片
+    // 修改渲染卡片函数
     const renderCard = (rowIndex: number, index: number) => {
-        const imageIndex = index % galleryImages.length;
+        const startIndex = rowIndex * 10;
+        const imageIndex = (startIndex + index) % galleryImages.length;
         const isFlipped = flippedItems.has(`${rowIndex}-${index}`);
         const image = galleryImages[imageIndex];
+        const isLoaded = loadedImages.has(image.id);
+        const isVisible = visibleImages.has(image.id);
 
         return (
             <div 
                 key={`main-${index}`} 
-                className={`gallery-item easter-egg ${isFlipped ? 'flipped' : ''}`}
+                className={`gallery-item easter-egg ${isFlipped ? 'flipped' : ''} ${isLoaded ? 'loaded' : ''}`}
                 onClick={() => handleFlip(rowIndex, index)}
                 style={{ '--egg-color': image.color } as React.CSSProperties}
+                data-image-id={image.id}
             >
                 <div className="card-inner">
                     <div className="card-front">
-                        <img 
-                            src={image.frontImage} 
-                            alt={`Front ${index + 1}`}
-                            className="card-image"
-                        />
+                        {isVisible ? (
+                            isLoaded ? (
+                                <img 
+                                    src={image.frontImage} 
+                                    alt={`Front ${imageIndex + 1}`}
+                                    className="card-image"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            ) : (
+                                <div className="image-placeholder">
+                                    <span>加载中...</span>
+                                </div>
+                            )
+                        ) : (
+                            <div className="image-placeholder">
+                                <span>等待加载...</span>
+                            </div>
+                        )}
                     </div>
                     <div className="card-back">
-                        <img 
-                            src={image.backImage} 
-                            alt={`Back ${index + 1}`}
-                            className="card-image"
-                        />
+                        {isVisible ? (
+                            isLoaded ? (
+                                <img 
+                                    src={image.backImage} 
+                                    alt={`Back ${imageIndex + 1}`}
+                                    className="card-image"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            ) : (
+                                <div className="image-placeholder">
+                                    <span>加载中...</span>
+                                </div>
+                            )
+                        ) : (
+                            <div className="image-placeholder">
+                                <span>等待加载...</span>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>
@@ -149,23 +428,22 @@ const MouseScrollableGallery: React.FC = () => {
                     <div key={rowIndex} className="gallery-row">
                         <div className="gallery-content">
                             {/* 左侧额外图片 */}
-                            {[...Array(5)].map((_, index) => (
-                                <div key={`left-${index}`} className="gallery-item">
-                                    <div className="image-placeholder">
-                                        <span>左侧 {rowIndex + 1}-{index + 1}</span>
-                                    </div>
-                                </div>
-                            ))}
+                            {[...Array(3)].map((_, index) => {
+                                const imageIndex = (rowIndex * 10 + index) % galleryImages.length;
+                                return renderCard(rowIndex, index);
+                            })}
                             {/* 主要图片 */}
-                            {[...Array(15)].map((_, index) => renderCard(rowIndex, index))}
+                            {[...Array(10)].map((_, index) => {
+                                const startIndex = rowIndex * 10 + 3; // 从第4个位置开始
+                                const imageIndex = (startIndex + index) % galleryImages.length;
+                                return renderCard(rowIndex, index + 3);
+                            })}
                             {/* 右侧额外图片 */}
-                            {[...Array(5)].map((_, index) => (
-                                <div key={`right-${index}`} className="gallery-item">
-                                    <div className="image-placeholder">
-                                        <span>右侧 {rowIndex + 1}-{index + 1}</span>
-                                    </div>
-                                </div>
-                            ))}
+                            {[...Array(3)].map((_, index) => {
+                                const startIndex = rowIndex * 10 + 13; // 从第14个位置开始
+                                const imageIndex = (startIndex + index) % galleryImages.length;
+                                return renderCard(rowIndex, index + 13);
+                            })}
                         </div>
                     </div>
                 ))}
