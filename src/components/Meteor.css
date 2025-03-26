@@ -15,8 +15,8 @@
     position: absolute;
     width: 2px;
     height: 2px;
-    background: white;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+    background: linear-gradient(90deg, #fff, #00ffff);
+    box-shadow: 0 0 10px 2px rgba(0, 255, 255, 0.8);
     animation: meteorFall linear infinite;
 }
 
@@ -26,22 +26,43 @@
     position: absolute;
     width: 100px;
     height: 2px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 1),
+        rgba(0, 255, 255, 0.8),
+        rgba(0, 255, 255, 0)
+    );
     transform: rotate(-45deg);
     top: 0;
     left: 0;
     animation: meteorTail linear infinite;
-    animation-duration: inherit; /* 继承父元素的动画时长 */
+    animation-duration: inherit;
+    filter: blur(1px);
+}
+
+/* 星芒效果 */
+.star-burst {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.8) 0%,
+        rgba(255, 255, 255, 0.4) 30%,
+        rgba(255, 255, 255, 0) 70%
+    );
+    animation: starTwinkle 2s ease-in-out infinite;
+    filter: blur(2px);
 }
 
 /* 流星下落动画 */
 @keyframes meteorFall {
     from {
-        transform: translate(0, 0);
+        transform: translate(-100px, -100px);
         opacity: 1;
     }
     to {
-        transform: translate(100vw, 100vh); /* 运动到屏幕右下角 */
+        transform: translate(calc(100vw + 100px), calc(100vh + 100px));
         opacity: 0;
     }
 }
@@ -49,11 +70,23 @@
 /* 流星尾巴的动画 */
 @keyframes meteorTail {
     from {
-        transform: translate(0, 0) rotate(225deg);
+        transform: translate(-100px, -100px) rotate(225deg);
         opacity: 1;
     }
     to {
-        transform: translate(100vw, 100vh) rotate(225deg);  /* 确保尾巴跟着流星的轨迹 */
+        transform: translate(calc(100vw + 100px), calc(100vh + 100px)) rotate(225deg);
         opacity: 0;
+    }
+}
+
+/* 星芒闪烁动画 */
+@keyframes starTwinkle {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.4;
+        transform: scale(1.2);
     }
 }

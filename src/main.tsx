@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./index.css";
 import Home from "./components/Home.tsx";
 import MouseScrollableGallery from "./components/MouseScrollableGallery.tsx";
+import About from "./components/About.tsx";
+import Survey from "./components/Survey.tsx";
+import LoveConfession from "./components/LoveConfession/LoveConfession.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -11,6 +14,9 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/photo" element={<MouseScrollableGallery/>}/>
+                <Route path="/about" element={<About/>}/>
+                <Route path="/survey" element={<Survey/>}/>
+                <Route path="/love" element={<LoveConfession/>}/>
             </Routes>
         </Router>
     </StrictMode>

@@ -7,6 +7,7 @@ import React, { useEffect, useState } from "react";
 import "./ArtText.css";
 import logo1 from "../assets/logo1.png";
 import logo2 from "../assets/logo2.png";
+import logo3 from "../assets/logo3.png";
 
 interface ArtTextProps {
     animate: boolean; // ✅ 控制动画是否播放
@@ -18,7 +19,7 @@ const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
     const [backgroundGradient, setBackgroundGradient] = useState<string>(
         "linear-gradient(to left, #a18cd1 0%, #fbc2eb 100%)"
     );
-    const logos = [logo1, logo2,logo2]; // 多个 logo 图片
+    const logos = [logo1, logo2,logo3]; // 多个 logo 图片
     const gradients = [
         "linear-gradient(to left, #fad0c4 0%, #ffd1ff 100%)",
         "linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)",
@@ -40,7 +41,7 @@ const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
                     setBackgroundGradient(gradients[(currentImageIndex + 1) % gradients.length]);
                     setPlayAnimation(true); // 重新触发动画
                 }, 50); // 50ms 的延迟确保类名被移除后再添加
-            }, 3000); // 每 3 秒切换一次图片和背景
+            }, 4000); // 每 3 秒切换一次图片和背景
 
             return () => clearInterval(interval); // 清除定时器
         }

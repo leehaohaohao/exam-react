@@ -7,6 +7,12 @@
     overflow: hidden;
     z-index: 1000; /* 确保遮罩层在最上层 */
     background: transparent; /* 背景透明，让整体渐变更柔和 */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.opening-container.open {
+    opacity: 0;
+    pointer-events: none; /* 禁用鼠标事件 */
 }
 
 .left-container,

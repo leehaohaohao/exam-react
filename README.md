@@ -52,3 +52,23 @@ export default tseslint.config({
   },
 })
 ```
+<div className="introduction-description">
+                    <p className={`text-segment ${visibleSegments.includes(0) ? 'visible' : ''}`}>
+                        第一次做这种交互式网站，希望你能喜欢。
+                    </p>
+                    <p className={`text-segment ${visibleSegments.includes(1) ? 'visible' : ''}`}>
+                        平常负责的都是底层开发，更注重背后的实现逻辑，而不是这种页面的布局设计这种。
+                    </p>
+                    <p className={`text-segment ${visibleSegments.includes(2) ? 'visible' : ''}`}>
+                        由于技术有限，部分页面存在卡顿现象，暂时无法解决，也因为效果还可以，所以就先这样了。
+                    </p>
+                    <p className={`text-segment ${visibleSegments.includes(3) ? 'visible' : ''}`}>
+                        由于服务器带宽很低，所以图片等资源加载很慢，如果可以耐心等待一下或者先简单看一遍，第二遍有缓存会更有体验感。
+                    </p>
+                    <p className={`text-segment ${visibleSegments.includes(4) ? 'visible' : ''}`}>
+                        温馨提示:有彩蛋的哦,不止1个哦。
+                    </p>
+                    <p className={`text-segment ${visibleSegments.includes(5) ? 'visible' : ''}`}>
+                        另外关于页面里提供有相关图片、网页图片等资源下载链接。
+                    </p>
+                </div>

@@ -129,7 +129,7 @@ const OpeningAnimation: React.FC<OpeningAnimationProps> = ({ onComplete, onStart
             {/* 圆形按钮 */}
             {showButton && (
                 <div className="circle-button" onClick={handleOpen}>
-                    <span>点击开启<br />你的祝福</span>
+                    <span>公主请签收</span>
                 </div>
             )}
         </div>

@@ -9,9 +9,11 @@ import FloatingMenu from "./FloatingMenu.tsx";
 import Meteor from "./Meteor.tsx";
 import OpeningAnimation from "./OpeningAnimation.tsx";
 import Barrage from "./Barrage.tsx";
+import Introduction from "./Introduction.tsx";
 
 const Home = () => {
-    const [showOpening, setShowOpening] = useState<boolean>(true);
+    const [showIntroduction, setShowIntroduction] = useState<boolean>(true);
+    const [showOpening, setShowOpening] = useState<boolean>(false);
     const [showArtTextAnimation, setShowArtTextAnimation] = useState<boolean>(false);
 
     return (
@@ -20,11 +22,15 @@ const Home = () => {
             <ArtText animate={showArtTextAnimation} />
             <FloatingMenu/>
             <Meteor />
-            {showOpening && (
-                <OpeningAnimation
-                    onComplete={() => setShowOpening(false)}
-                    onStartArtText={() => setShowArtTextAnimation(true)} // ✅ 开幕式触发 ArtText 动画
-                />
+            <OpeningAnimation
+                onComplete={() => setShowOpening(false)}
+                onStartArtText={() => setShowArtTextAnimation(true)}
+            />
+            {showIntroduction && (
+                <Introduction onStart={() => {
+                    setShowIntroduction(false);
+                    setShowOpening(true);
+                }} />
             )}
         </>
     );

@@ -14,7 +14,7 @@ const Meteor: React.FC = () => {
             key={index}
             className="meteor"
             style={{
-                top: `${Math.random() * 80}%`,
+                top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
                 animationDuration: `${Math.random() * 3 + 2}s`,
                 animationDelay: `${Math.random() * 5}s`,
@@ -26,6 +26,8 @@ const Meteor: React.FC = () => {
         <div className="meteor-container">
             {/* 流星 */}
             {meteors}
+            {/* 星芒 */}
+            <div className="star-burst"></div>
         </div>
     );
 };
