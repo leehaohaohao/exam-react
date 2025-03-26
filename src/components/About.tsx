@@ -148,6 +148,12 @@ const timelineData: TimelineItem[] = [
         description: "自己电脑上跑的好好地，一放到服务器就出各种bug，照片墙的图片全部不显示",
         image: "/images/line/22.jpg"
     },
+    {
+        year: "2025-3-26 22:48",
+        title: "项目部署运行最烦的时刻-2",
+        description: "毁灭吧，毁灭吧，刚修好上面一个bug，你咋也不动了",
+        image: "/images/line/23.jpg"
+    },
 ];
 
 const About: React.FC = () => {
@@ -176,11 +182,91 @@ const About: React.FC = () => {
             <div className="about-page">
                 <div className="about-hero">
                     <div className="hero-content">
-                        <h1>关于我们</h1>
-                        <p>探索我们的故事</p>
+                        <h1 className="animate-title">作品历程</h1>
+                        <p className="animate-subtitle">About Story</p>
+                    </div>
+                </div>
+                <div className="about-content">
+                    <div className="about-section">
+                        <h2>关于作品</h2>
+                        <div className="credits-container">
+                            <div className="credits-group">
+                                <h3>制作团队</h3>
+                                <div className="credits-item">
+                                    <span className="role">总策划</span>
+                                    <span className="name">李昊</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">设计总监</span>
+                                    <span className="name">leehao</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">技术总监</span>
+                                    <span className="name">李哈</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">内容编辑</span>
+                                    <span className="name">lihao</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">背锅侠</span>
+                                    <span className="name">李日天</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">牛马测试员</span>
+                                    <span className="name">王冲</span>
+                                </div>
+                            </div>
+                            <div className="credits-group">
+                                <h3>特别致谢</h3>
+                                <div className="credits-item">
+                                    <span className="role">特邀嘉宾</span>
+                                    <span className="name">常静雯</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">领衔主演</span>
+                                    <span className="name">常仙女</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">灵感缪斯</span>
+                                    <span className="name">常公主</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">首席体验官</span>
+                                    <span className="name">常陛下</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">终身荣誉顾问</span>
+                                    <span className="name">常老板</span>
+                                </div>
+                                <div className="credits-item">
+                                    <span className="role">待定身份</span>
+                                    <span className="name">待定人</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="download-section">
+                        <div className="download-container">
+                            <h2>素材下载</h2>
+                            <p>高清设计素材，欢迎下载收藏</p>
+                            <div className="download-grid">
+                                <a href="/downloads/designs.zip" className="download-item">
+                                    <div className="download-icon">🎨</div>
+                                    <div className="download-info">
+                                        <h3>设计素材</h3>
+                                        <p>包含所有插图、艺术字设计</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="timeline-section">
+                    <div className="timeline-header">
+                        <h2>时间线</h2>
+                        <p>作品的故事，从这里开始</p>
+                    </div>
                     <div className="timeline-container">
                         {timelineData.map((item, index) => (
                             <div key={index} className="timeline-item">
