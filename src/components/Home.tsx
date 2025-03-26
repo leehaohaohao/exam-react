@@ -32,6 +32,7 @@ const Home = () => {
                     setShowOpening(true);
                 }} />
             )}
+            {showOpening&&<></>}
         </>
     );
 };

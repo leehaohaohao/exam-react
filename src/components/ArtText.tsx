@@ -5,9 +5,9 @@
  */
 import React, { useEffect, useState } from "react";
 import "./ArtText.css";
-import logo1 from "../assets/logo1.png";
-import logo2 from "../assets/logo2.png";
-import logo3 from "../assets/logo3.png";
+import logo1 from "../../public/images/logo1.png";
+import logo2 from "../../public/images/logo2.png";
+import logo3 from "../../public/images/logo3.png";
 
 interface ArtTextProps {
     animate: boolean; // ✅ 控制动画是否播放

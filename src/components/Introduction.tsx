@@ -26,9 +26,6 @@ const Introduction: React.FC<IntroductionProps> = ({ onStart }) => {
                     第一次做这种交互式网站，希望你能喜欢。
                 </p>
                 <p className="introduction-description">
-                    第一次做这种交互式网站，希望你能喜欢。
-                </p>
-                <p className="introduction-description">
                     平常负责的都是底层开发，更注重背后的实现逻辑，而不是这种页面的布局设计这种。
                 </p>
                 <p className="introduction-description">
