@@ -1,0 +1,114 @@
+.confirm-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.confirm-dialog {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    animation: slideIn 0.3s ease-in-out;
+}
+
+.confirm-dialog-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.confirm-message {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 24px;
+    line-height: 1.6;
+    overflow-y: auto;
+    max-height: calc(80vh - 120px);
+    padding: 0 8px;
+    white-space: pre-wrap;
+}
+
+.confirm-message::-webkit-scrollbar {
+    width: 6px;
+}
+
+.confirm-message::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.confirm-message::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.confirm-message::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.confirm-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.confirm-button {
+    padding: 10px 28px;
+    border-radius: 6px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 80px;
+}
+
+.confirm-button.cancel {
+    background-color: #f5f5f5;
+    color: #666;
+}
+
+.confirm-button.confirm {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.confirm-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+} 
