@@ -14,212 +14,212 @@ interface GalleryImage {
 const galleryImages: GalleryImage[] = [
     {
         id: "1",
-        frontImage: "/public/images/photo/compressed/2.jpg",
-        backImage: "/public/images/back/2.jpg",
+        frontImage: "images/photo/compressed/2.jpg",
+        backImage: "images/back/2.jpg",
         color: "#FFB6C1" // 浅粉色
     },
     {
         id: "2",
-        frontImage: "/public/images/photo/compressed/2.jpg",
-        backImage: "/public/images/back/1.jpg",
+        frontImage: "images/photo/compressed/2.jpg",
+        backImage: "images/back/1.jpg",
         color: "#FFC0CB" // 粉红色
     },
     {
         id: "3",
-        frontImage: "/public/images/photo/compressed/7.jpg",
-        backImage: "/public/images/back/1.jpg",
+        frontImage: "images/photo/compressed/7.jpg",
+        backImage: "images/back/1.jpg",
         color: "#FFE4E1" // 浅玫瑰色
     },
     {
         id: "4",
-        frontImage: "/public/images/photo/compressed/8.jpg",
-        backImage: "/public/images/back/4.jpg",
+        frontImage: "images/photo/compressed/8.jpg",
+        backImage: "images/back/4.jpg",
         color: "#FFF0F5" // 薰衣草色
     },
     {
         id: "5",
-        frontImage: "/public/images/photo/compressed/9.jpg",
-        backImage: "/public/images/back/5.jpg",
+        frontImage: "images/photo/compressed/9.jpg",
+        backImage: "images/back/5.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "6",
-        frontImage: "/public/images/photo/compressed/10.jpg",
-        backImage: "/public/images/photo/compressed/2.jpg",
+        frontImage: "images/photo/compressed/10.jpg",
+        backImage: "images/photo/compressed/2.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "7",
-        frontImage: "/public/images/photo/compressed/11.jpg",
-        backImage: "/public/images/photo/compressed/2.jpg",
+        frontImage: "images/photo/compressed/11.jpg",
+        backImage: "images/photo/compressed/2.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "8",
-        frontImage: "/public/images/photo/compressed/12.jpg",
-        backImage: "/public/images/back/1.jpg",
+        frontImage: "images/photo/compressed/12.jpg",
+        backImage: "images/back/1.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "9",
-        frontImage: "/public/images/photo/compressed/13.jpg",
-        backImage: "/public/images/photo/compressed/8.jpg",
+        frontImage: "images/photo/compressed/13.jpg",
+        backImage: "images/photo/compressed/8.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "10",
-        frontImage: "/public/images/photo/compressed/14.jpg",
-        backImage: "/public/images/photo/compressed/9.jpg",
+        frontImage: "images/photo/compressed/14.jpg",
+        backImage: "images/photo/compressed/9.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "11",
-        frontImage: "/public/images/photo/compressed/15.jpg",
-        backImage: "/public/images/photo/compressed/10.jpg",
+        frontImage: "images/photo/compressed/15.jpg",
+        backImage: "images/photo/compressed/10.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "12",
-        frontImage: "/public/images/photo/compressed/16.jpg",
-        backImage: "/public/images/photo/compressed/11.jpg",
+        frontImage: "images/photo/compressed/16.jpg",
+        backImage: "images/photo/compressed/11.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "13",
-        frontImage: "/public/images/photo/compressed/17.jpg",
-        backImage: "/public/images/back/3.jpg",
+        frontImage: "images/photo/compressed/17.jpg",
+        backImage: "images/back/3.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "14",
-        frontImage: "/public/images/photo/compressed/19.jpg",
-        backImage: "/public/images/photo/compressed/5.jpg",
+        frontImage: "images/photo/compressed/19.jpg",
+        backImage: "images/photo/compressed/5.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "15",
-        frontImage: "/public/images/photo/compressed/20.jpg",
-        backImage: "/public/images/back/4.jpg",
+        frontImage: "images/photo/compressed/20.jpg",
+        backImage: "images/back/4.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "16",
-        frontImage: "/public/images/photo/compressed/22.jpg",
-        backImage: "/public/images/back/2.jpg",
+        frontImage: "images/photo/compressed/22.jpg",
+        backImage: "images/back/2.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "17",
-        frontImage: "/public/images/photo/compressed/23.jpg",
-        backImage: "/public/images/photo/compressed/16.jpg",
+        frontImage: "images/photo/compressed/23.jpg",
+        backImage: "images/photo/compressed/16.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "18",
-        frontImage: "/public/images/photo/compressed/25.jpg",
-        backImage: "/public/images/photo/compressed/17.jpg",
+        frontImage: "images/photo/compressed/25.jpg",
+        backImage: "images/photo/compressed/17.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "19",
-        frontImage: "/public/images/photo/compressed/26.jpg",
-        backImage: "/public/images/back/5.jpg",
+        frontImage: "images/photo/compressed/26.jpg",
+        backImage: "images/back/5.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "20",
-        frontImage: "/public/images/photo/compressed/27.jpg",
-        backImage: "/public/images/photo/compressed/20.jpg",
+        frontImage: "images/photo/compressed/27.jpg",
+        backImage: "images/photo/compressed/20.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "21",
-        frontImage: "/public/images/photo/compressed/30.jpg",
-        backImage: "/public/images/photo/compressed/22.jpg",
+        frontImage: "images/photo/compressed/30.jpg",
+        backImage: "images/photo/compressed/22.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "22",
-        frontImage: "/public/images/photo/compressed/31.jpg",
-        backImage: "/public/images/photo/compressed/23.jpg",
+        frontImage: "images/photo/compressed/31.jpg",
+        backImage: "images/photo/compressed/23.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "23",
-        frontImage: "/public/images/photo/compressed/32.jpg",
-        backImage: "/public/images/photo/compressed/25.jpg",
+        frontImage: "images/photo/compressed/32.jpg",
+        backImage: "images/photo/compressed/25.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "24",
-        frontImage: "/public/images/photo/compressed/34.jpg",
-        backImage: "/public/images/photo/compressed/26.jpg",
+        frontImage: "images/photo/compressed/34.jpg",
+        backImage: "images/photo/compressed/26.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "25",
-        frontImage: "/public/images/photo/compressed/35.jpg",
-        backImage: "/public/images/photo/compressed/27.jpg",
+        frontImage: "images/photo/compressed/35.jpg",
+        backImage: "images/photo/compressed/27.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "26",
-        frontImage: "/public/images/photo/compressed/36.jpg",
-        backImage: "/public/images/photo/compressed/30.jpg",
+        frontImage: "images/photo/compressed/36.jpg",
+        backImage: "images/photo/compressed/30.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "27",
-        frontImage: "/public/images/photo/compressed/37.jpg",
-        backImage: "/public/images/photo/compressed/31.jpg",
+        frontImage: "images/photo/compressed/37.jpg",
+        backImage: "images/photo/compressed/31.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "28",
-        frontImage: "/public/images/photo/compressed/38.jpg",
-        backImage: "/public/images/photo/compressed/32.jpg",
+        frontImage: "images/photo/compressed/38.jpg",
+        backImage: "images/photo/compressed/32.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "29",
-        frontImage: "/public/images/photo/compressed/39.jpg",
-        backImage: "/public/images/back/2.jpg",
+        frontImage: "images/photo/compressed/39.jpg",
+        backImage: "images/back/2.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "30",
-        frontImage: "/public/images/photo/compressed/40.jpg",
-        backImage: "/public/images/photo/compressed/35.jpg",
+        frontImage: "images/photo/compressed/40.jpg",
+        backImage: "images/photo/compressed/35.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "31",
-        frontImage: "/public/images/photo/compressed/41.jpg",
-        backImage: "/public/images/back/4.jpg",
+        frontImage: "images/photo/compressed/41.jpg",
+        backImage: "images/back/4.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "32",
-        frontImage: "/public/images/photo/compressed/42.jpg",
-        backImage: "/public/images/photo/compressed/37.jpg",
+        frontImage: "images/photo/compressed/42.jpg",
+        backImage: "images/photo/compressed/37.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "33",
-        frontImage: "/public/images/photo/compressed/43.jpg",
-        backImage: "/public/images/photo/compressed/38.jpg",
+        frontImage: "images/photo/compressed/43.jpg",
+        backImage: "images/photo/compressed/38.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "34",
-        frontImage: "/public/images/photo/compressed/44.jpg",
-        backImage: "/public/images/photo/compressed/39.jpg",
+        frontImage: "images/photo/compressed/44.jpg",
+        backImage: "images/photo/compressed/39.jpg",
         color: "#FFE4B5" // 浅橙色
     },
     {
         id: "35",
-        frontImage: "/public/images/photo/compressed/45.jpg",
-        backImage: "/public/images/photo/compressed/40.jpg",
+        frontImage: "images/photo/compressed/45.jpg",
+        backImage: "images/photo/compressed/40.jpg",
         color: "#FFE4B5" // 浅橙色
     }
 ];

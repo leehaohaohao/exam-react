@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ImageState } from "./types.ts";
 import "./LoveConfession.css"
+
 const LoveConfession: React.FC = () => {
     const [clickCount, setClickCount] = useState(0);
     const [imageState, setImageState] = useState<ImageState>('heart');
@@ -45,10 +46,10 @@ const LoveConfession: React.FC = () => {
 
     if (showSuccess) {
         return (
-            <div className="love-confession">
-                <div className="lc-yes-screen">
-                    <h1 className="lc-yes-text">!!!喜欢你!! ( &gt;᎑&lt;)♡︎ᐝ</h1>
-                    <img src={getImageSrc()} alt="拥抱" className="lc-yes-image" />
+            <div className="success-container">
+                <div className="success-content">
+                    <h1 className="success-text">!!!喜欢你!! ( &gt;᎑&lt;)♡︎ᐝ</h1>
+                    <img src={getImageSrc()} alt="拥抱" className="success-image" />
                 </div>
             </div>
         );
@@ -89,7 +90,7 @@ const LoveConfession: React.FC = () => {
                 </div>
             </div>
         </div>
-            );
-            };
+    );
+};
 
-            export default LoveConfession;
+export default LoveConfession;

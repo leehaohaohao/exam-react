@@ -117,3 +117,46 @@
         width: 300px;
     }
 }
+/* 新增成功页面全屏样式 */
+.success-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffdae0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-content {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.success-text {
+    font-size: 7vw;
+    color: #d4818e;
+    margin-bottom: 20px;
+}
+
+.success-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 桌面样式 */
+@media (min-width: 768px) {
+    .success-text {
+        font-size: 36px;
+    }
+
+    .success-image {
+        width: 300px;
+    }
+}

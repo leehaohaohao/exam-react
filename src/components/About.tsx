@@ -143,10 +143,10 @@ const timelineData: TimelineItem[] = [
         image: "/images/line/20.jpg"
     },
     {
-        year: "2025-3-26 16:00",
-        title: "照片墙史诗级优化（不是",
-        description: "做了一个轮切的页面效果，我感觉很酷很帅，哈哈",
-        image: "/images/line/17.jpg"
+        year: "2025-3-26 22:08",
+        title: "项目部署运行最烦的时刻",
+        description: "自己电脑上跑的好好地，一放到服务器就出各种bug，照片墙的图片全部不显示",
+        image: "/images/line/22.jpg"
     },
 ];
 
