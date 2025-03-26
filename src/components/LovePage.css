@@ -1,0 +1,224 @@
+.love-page {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.section {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    margin-bottom: 20vh;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-section {
+    width: 50%;
+    height: 80vh;
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+}
+
+.text-section {
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.layout-left {
+    flex-direction: row;
+}
+
+.layout-right {
+    flex-direction: row-reverse;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fce4ec, #f8bbd0);
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: '❤';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 120px;
+    color: rgba(244, 143, 177, 0.3);
+    animation: float 6s ease-in-out infinite;
+}
+
+.animated-text {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 动画效果 */
+.animation-fade {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.animation-fade.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animation-slide {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.animation-slide.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animation-scale {
+    opacity: 0;
+    transform: scale(0.5);
+}
+
+.animation-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.animation-rotate {
+    opacity: 0;
+    transform: rotate(-10deg) scale(0.8);
+}
+
+.animation-rotate.visible {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+}
+
+.animation-bounce {
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.animation-bounce.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #d81b60;
+    background: none;
+    box-shadow: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.highlight {
+    font-size: 28px;
+    color: #c2185b;
+    font-weight: 500;
+}
+
+.love-message {
+    font-size: 42px;
+    color: #c2185b;
+    font-weight: bold;
+    background: linear-gradient(45deg, #fce4ec, #f8bbd0);
+    color: #c2185b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.question {
+    font-size: 32px;
+    color: #c2185b;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #f48fb1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(244, 143, 177, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(244, 143, 177, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(244, 143, 177, 0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        min-height: 100vh;
+        margin-bottom: 0;
+    }
+
+    .image-section {
+        height: 50vh;
+        position: relative;
+        width: 100%;
+    }
+
+    .text-section {
+        height: 50vh;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .animated-text {
+        font-size: 20px;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .love-message {
+        font-size: 32px;
+        padding: 20px;
+    }
+
+    .question {
+        font-size: 24px;
+    }
+} 

@@ -6,7 +6,7 @@ import Home from "./components/Home.tsx";
 import MouseScrollableGallery from "./components/MouseScrollableGallery.tsx";
 import About from "./components/About.tsx";
 import Survey from "./components/Survey.tsx";
-import LoveConfession from "./components/LoveConfession/LoveConfession.tsx";
+import LovePage from "./components/LovePage.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -16,7 +16,7 @@ createRoot(document.getElementById("root")!).render(
                 <Route path="/photo" element={<MouseScrollableGallery/>}/>
                 <Route path="/about" element={<About/>}/>
                 <Route path="/survey" element={<Survey/>}/>
-                <Route path="/love" element={<LoveConfession/>}/>
+                <Route path="/love" element={<LovePage/>}/>
             </Routes>
         </Router>
     </StrictMode>
