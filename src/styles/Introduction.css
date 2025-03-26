@@ -10,6 +10,20 @@
     align-items: center;
     z-index: 1001;
     transition: opacity 1s ease-in-out;
+    overflow: hidden;
+}
+
+.introduction-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 20% 20%, rgba(255, 154, 158, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(250, 208, 196, 0.1) 0%, transparent 50%);
+    z-index: 0;
 }
 
 .introduction-container.fading {
@@ -20,6 +34,12 @@
     text-align: center;
     color: #4a4a4a;
     padding: 2rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
 }
 
 .introduction-title {
@@ -28,6 +48,26 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
+    position: relative;
+}
+
+.introduction-title::before,
+.introduction-title::after {
+    content: '✨';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    opacity: 0;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+.introduction-title::before {
+    left: -40px;
+}
+
+.introduction-title::after {
+    right: -40px;
 }
 
 .introduction-description {
@@ -37,6 +77,17 @@
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 0.3s;
+    position: relative;
+}
+
+.introduction-description::before {
+    content: '💭';
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    opacity: 0.6;
 }
 
 .introduction-button {
@@ -120,7 +171,43 @@
     opacity: 0;
 }
 
-// ... existing code ...
+
+/* 添加漂浮的装饰元素 */
+.floating-element {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-element:nth-child(2) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.floating-element:nth-child(3) {
+    top: 80%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+}
 
 @keyframes fadeInUp {
     from {
@@ -130,5 +217,15 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(-50%) scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
     }
 }

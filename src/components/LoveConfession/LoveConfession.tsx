@@ -1,12 +1,6 @@
-/**
- * @description
- * @author lihao
- * @date 2025/3/26 18:17
- */
 import React, { useState } from 'react';
-import './LoveConfession.css';
-import {ImageState} from "./types.ts";
-
+import { ImageState } from "./types.ts";
+import "./LoveConfession.css"
 const LoveConfession: React.FC = () => {
     const [clickCount, setClickCount] = useState(0);
     const [imageState, setImageState] = useState<ImageState>('heart');
@@ -27,7 +21,6 @@ const LoveConfession: React.FC = () => {
         const newCount = clickCount + 1;
         setClickCount(newCount);
 
-        // Change image based on click count
         if (newCount === 1) setImageState('shocked');
         if (newCount === 2) setImageState('think');
         if (newCount === 3) setImageState('angry');
@@ -52,45 +45,51 @@ const LoveConfession: React.FC = () => {
 
     if (showSuccess) {
         return (
-            <div className="yes-screen">
-                <h1 className="yes-text">!!!喜欢你!! ( &gt;᎑&lt;)♡︎ᐝ</h1>
-                <img src={getImageSrc()} alt="拥抱" className="yes-image" />
+            <div className="love-confession">
+                <div className="lc-yes-screen">
+                    <h1 className="lc-yes-text">!!!喜欢你!! ( &gt;᎑&lt;)♡︎ᐝ</h1>
+                    <img src={getImageSrc()} alt="拥抱" className="lc-yes-image" />
+                </div>
             </div>
         );
     }
 
     return (
-        <div className="container">
-            <img
-                id="mainImage"
-                src={getImageSrc()}
-                alt="爱心"
-                style={{ transform: `translateY(-${clickCount * 25}px)` }}
-            />
-            <h1
-                id="question"
-                style={{ transform: `translateY(-${clickCount * 25}px)` }}
-            >
-                常公主，可以做我女朋友嘛？
-            </h1>
-            <div className="buttons">
-                <button
-                    id="yes"
-                    onClick={handleYesClick}
-                    style={{ transform: `scale(${1 + (clickCount * 1.2)})` }}
-                >
-                    必须可以
-                </button>
-                <button
-                    id="no"
-                    onClick={handleNoClick}
-                    style={{ transform: `translateX(${clickCount * 50}px)` }}
-                >
-                    {clickCount < noTexts.length ? noTexts[clickCount] : noTexts[noTexts.length - 1]}
-                </button>
+        <div className="love-confession-container">
+            <div className="love-confession">
+                <div className="lc-container">
+                    <img
+                        className="lc-main-image"
+                        src={getImageSrc()}
+                        alt="爱心"
+                        style={{transform: `translateY(-${clickCount * 25}px)`}}
+                    />
+                    <h1
+                        className="lc-question"
+                        style={{transform: `translateY(-${clickCount * 25}px)`}}
+                    >
+                        常公主，可以做我女朋友嘛？
+                    </h1>
+                    <div className="lc-buttons">
+                        <button
+                            className="lc-yes-button"
+                            onClick={handleYesClick}
+                            style={{transform: `scale(${1 + (clickCount * 1.2)})`}}
+                        >
+                            必须可以
+                        </button>
+                        <button
+                            className="lc-no-button"
+                            onClick={handleNoClick}
+                            style={{transform: `translateX(${clickCount * 50}px)`}}
+                        >
+                            {clickCount < noTexts.length ? noTexts[clickCount] : noTexts[noTexts.length - 1]}
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-    );
-};
+            );
+            };
 
-export default LoveConfession;
+            export default LoveConfession;
