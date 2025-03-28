@@ -23,7 +23,7 @@ const questions: Question[] = [
         id: 2,
         text: "陛下最喜欢哪些功能？（可多选）",
         type: "checkbox",
-        options: ["照片展示", "动画效果", "交互设计", "整体布局"],
+        options: ["开幕页面","首页艺术字设计","首页弹幕效果","照片展示", "动画效果", "交互设计", "整体布局","色彩搭配","创意想法"],
         required: true
     },
     {
@@ -40,7 +40,7 @@ const questions: Question[] = [
     },
     {
         id: 4,
-        text: "你觉得还需要添加什么功能？",
+        text: "如有圣意，还请陛下指示",
         type: "text",
         required: false
     }
@@ -189,7 +189,7 @@ const Survey: React.FC = () => {
                             {question.type === 'text' && (
                                 <textarea
                                     className="text-input"
-                                    placeholder="请输入你的想法..."
+                                    placeholder="请陛下书写圣旨..."
                                     value={answers[question.id] as string || ''}
                                     onChange={(e) => handleAnswer(question.id, e.target.value)}
                                     required={question.required}
@@ -199,7 +199,7 @@ const Survey: React.FC = () => {
                     ))}
 
                     <button type="submit" className="submit-button">
-                        提交问卷
+                        微臣遵旨
                     </button>
                 </form>
             </div>

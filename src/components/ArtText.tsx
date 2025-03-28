@@ -41,7 +41,7 @@ const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
                     setBackgroundGradient(gradients[(currentImageIndex + 1) % gradients.length]);
                     setPlayAnimation(true); // 重新触发动画
                 }, 50); // 50ms 的延迟确保类名被移除后再添加
-            }, 4000); // 每 3 秒切换一次图片和背景
+            }, 7000); // 每 3 秒切换一次图片和背景
 
             return () => clearInterval(interval); // 清除定时器
         }

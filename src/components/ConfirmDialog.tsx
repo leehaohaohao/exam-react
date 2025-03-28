@@ -6,9 +6,18 @@ interface ConfirmDialogProps {
     onClose: () => void;
     onConfirm: () => void;
     message: string;
+    confirmText?: string;
+    cancelText?: string;
 }
 
-const ConfirmDialog: React.FC<ConfirmDialogProps> = ({ isOpen, onClose, onConfirm, message }) => {
+const ConfirmDialog: React.FC<ConfirmDialogProps> = ({ 
+    isOpen, 
+    onClose, 
+    onConfirm, 
+    message,
+    confirmText = "确定",
+    cancelText = "取消"
+}) => {
     if (!isOpen) return null;
 
     return (
@@ -18,10 +27,10 @@ const ConfirmDialog: React.FC<ConfirmDialogProps> = ({ isOpen, onClose, onConfir
                     <p className="confirm-message">{message}</p>
                     <div className="confirm-buttons">
                         <button className="confirm-button cancel" onClick={onClose}>
-                            取消
+                            {cancelText}
                         </button>
                         <button className="confirm-button confirm" onClick={onConfirm}>
-                            确定
+                            {confirmText}
                         </button>
                     </div>
                 </div>

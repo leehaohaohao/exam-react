@@ -213,8 +213,8 @@ const About: React.FC = () => {
                                     <span className="name">李日天</span>
                                 </div>
                                 <div className="credits-item">
-                                    <span className="role">牛马测试员</span>
-                                    <span className="name">王冲</span>
+                                    <span className="role">待定身份</span>
+                                    <span className="name">待定人</span>
                                 </div>
                             </div>
                             <div className="credits-group">
@@ -228,7 +228,7 @@ const About: React.FC = () => {
                                     <span className="name">常仙女</span>
                                 </div>
                                 <div className="credits-item">
-                                    <span className="role">灵感缪斯</span>
+                                    <span className="role">中央政委</span>
                                     <span className="name">常公主</span>
                                 </div>
                                 <div className="credits-item">
@@ -243,6 +243,119 @@ const About: React.FC = () => {
                                     <span className="role">待定身份</span>
                                     <span className="name">待定人</span>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="design-details-section">
+                        <div className="design-details-container">
+                            <h2>设计细节</h2>
+                            <p>介绍一下设计想法</p>
+                            <div className="design-details-grid">
+                                <div className="design-detail-item with-image">
+                                    <h3>过去</h3>
+                                    <div className="design-detail-content">
+                                        <div className="design-detail-image">
+                                            <img src="/images/logo1.png" alt="艺术字设计" />
+                                        </div>
+                                        <p>hahaha</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item with-image">
+                                    <h3>现在</h3>
+                                    <div className="design-detail-content">
+                                        <div className="design-detail-image">
+                                            <img src="/images/logo2.png" alt="艺术字设计" />
+                                        </div>
+                                        <p>哈哈</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item with-image">
+                                    <h3>未来</h3>
+                                    <div className="design-detail-content">
+                                        <div className="design-detail-image">
+                                            <img src="/images/logo3.png" alt="艺术字设计" />
+                                        </div>
+                                        <p>啊哈哈</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item without-image">
+                                    <h3>配色</h3>
+                                    <div className="design-detail-content">
+                                        <p>整个网站呢采用的都是些温柔的渐变色调，希望你能够喜欢</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item with-image">
+                                    <h3>开幕左右文字上下浮动</h3>
+                                    <div className="design-detail-content">
+                                        <div className="design-detail-image">
+                                            <img src="/images/design/1.png" alt="艺术字设计" />
+                                        </div>
+                                        <p>我感觉很酷，那种法术经文上下运转。里面也都是祝福的文字，祝福的话呢虽然是口头上的，但也是真心希望可以实现的</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item with-image">
+                                    <h3>照片墙</h3>
+                                    <div className="design-detail-content">
+                                        <div className="design-detail-image">
+                                            <img src="/images/design/2.png" alt="艺术字设计" />
+                                        </div>
+                                        <p>这个我想做一个可以用来展示一些纪念的图片</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item without-image">
+                                    <h3>问卷</h3>
+                                    <div className="design-detail-content">
+                                        <p>哈哈，其实本来还想集成圣诞树那些，啊呀，大话说早了，我可以做但是做的太丑了，就不要了换成问卷了，我希望这个网站不是第一个，换句话说这个可以一直记录下去。</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item without-image">
+                                    <h3>关于</h3>
+                                    <div className="design-detail-content">
+                                        <p>就是想介绍一下整个作品的实现吧，好像这个关于板块比其他做的还好看点，而且内容丰富点。</p>
+                                    </div>
+                                </div>
+                                <div className="design-detail-item without-image">
+                                    <h3>神秘板块</h3>
+                                    <div className="design-detail-content">
+                                        <p>**************</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="easter-egg-section">
+                        <div className="easter-egg-container">
+                            <h2>彩蛋专区</h2>
+                            <p>一些有趣的小发现</p>
+                            <div className="easter-egg-grid">
+                                <div className="easter-egg-item">
+                                    <div className="easter-egg-content">
+                                        <h3>首页彩蛋</h3>
+                                        <p>首页的3个艺术字里各自有cjw有没有注意到呢？cjw字形也有特殊的地方哦。</p>
+                                    </div>
+                                    <div className="easter-egg-image">
+                                        <img src="/images/easter/4.png" alt="星星彩蛋" />
+                                    </div>
+                                </div>
+                                <div className="easter-egg-item">
+                                    <div className="easter-egg-content">
+                                        <h3>照片墙彩蛋</h3>
+                                        <p>在照片墙里的照片可以点击翻转的哦，可能有点冒昧，但好看</p>
+                                    </div>
+                                    <div className="easter-egg-image">
+                                        <img src="/images/easter/1.png" alt="照片墙彩蛋" />
+                                    </div>
+                                </div>
+                                <div className="easter-egg-item">
+                                    <div className="easter-egg-content">
+                                        <h3>时间线彩蛋</h3>
+                                        <p>在时间线页面点击底部，会出现可爱的小心心！（忽略此条，重大bug，连d老师都无能为力）</p>
+                                    </div>
+                                    <div className="easter-egg-image">
+                                        <img src="/images/easter/5.png" alt="心形彩蛋" />
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
