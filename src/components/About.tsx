@@ -178,6 +178,12 @@ const timelineData: TimelineItem[] = [
         description: "有一点点紧张了",
         image: "/images/default.png"
     },
+    {
+        year: "2025-3-29 20:30",
+        title: "有种释怀的感觉，正式发布Version-5.2.1",
+        description: "有一点点紧张了",
+        image: "/images/line/26.jpg"
+    },
 ];
 
 const About: React.FC = () => {
@@ -415,11 +421,11 @@ const About: React.FC = () => {
                                 <h2>素材下载</h2>
                                 <p>高清设计素材，欢迎下载收藏</p>
                                 <div className="download-grid">
-                                    <a href="/downloads/designs.zip" className="download-item">
+                                    <a href="/design.zip" className="download-item">
                                         <div className="download-icon">🎨</div>
                                         <div className="download-info">
                                             <h3>设计素材</h3>
-                                            <p>包含所有插图、艺术字设计</p>
+                                            <p>包含自己设计制作的图</p>
                                         </div>
                                     </a>
                                 </div>

@@ -40,6 +40,16 @@ server {
         index index.html index.htm;
         try_files $uri $uri/ /index.html;
     }
+    location /courseware/ {
+            proxy_pass http://121.40.154.188:10001;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            add_header Access-Control-Allow-Origin *;
+            add_header Access-Control-Allow-Methods "GET, POST, OPTIONS";
+            add_header Access-Control-Allow-Headers "Origin, Content-Type, Accept, Authorization";
+        }
 }
 EOF
 

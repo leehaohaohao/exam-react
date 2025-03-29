@@ -58,7 +58,7 @@ const Survey: React.FC = () => {
         }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
 
         // 验证必填问题是否都已回答
@@ -74,8 +74,34 @@ const Survey: React.FC = () => {
             return;
         }
 
-        console.log('提交的答案：', answers);
-        setSubmitted(true);
+        // 将答案转换为字符串格式
+        const answerString = questions.map(q => {
+            const answer = answers[q.id];
+            if (Array.isArray(answer)) {
+                return answer.join('|');
+            }
+            return answer || '';
+        }).join('|');
+
+        try {
+            const response = await fetch('http://121.40.154.188:10001/courseware/survey', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: `survey=${encodeURIComponent(answerString)}`
+            });
+
+            if (!response.ok) {
+                throw new Error('提交失败');
+            }
+
+            console.log('提交成功');
+            setSubmitted(true);
+        } catch (error) {
+            console.error('提交失败:', error);
+            alert('提交失败，请稍后重试');
+        }
     };
 
     if (submitted) {
@@ -85,7 +111,7 @@ const Survey: React.FC = () => {
                     <div className="thank-you-icon">❤️</div>
                     <h2>微臣恭送陛下！</h2>
                     <p className="thank-you-text">陛下万岁万岁万万岁</p>
-                    <p className="thank-you-subtext">微臣定尊圣旨继续努力，我们来日方长</p>
+                    <p className="thank-you-subtext">春来冬去，秋来夏走，我们来日方长</p>
                     <p className="thank-you-subtext">愿你岁岁平，岁岁安，年年岁岁，岁岁年年，平平安安</p>
                     <button
                         className="home-button"
