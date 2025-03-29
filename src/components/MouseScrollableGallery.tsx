@@ -469,7 +469,7 @@ const MouseScrollableGallery: React.FC = () => {
                     
                     {/* 文字内容 */}
                     <div className="text-container">
-                        <h1 className="title-text">给你看看我学校的花花</h1>
+                        <h1 className="title-text">给你看看我学校的风景</h1>
                         <p className="subtitle-text">向下滚动探索</p>
                     </div>
 

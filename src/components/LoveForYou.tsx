@@ -6,9 +6,11 @@
 import "./LoveForYou.css"
 import { useEffect, useRef } from "react";
 import WordCloud from "./WordCloud";
+import { useNavigate } from "react-router-dom";
 
 const LoveForYou = () => {
     const sectionRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const navigate = useNavigate();
 
     const personalityWords = [
         "上进心", "优柔寡断", "完美主义", "边界感", "放空思考",
@@ -181,6 +183,22 @@ const LoveForYou = () => {
                         <div className="signature">
                             lh by 2025-3-29
                         </div>
+                    </div>
+                </div>
+            </div>
+            {/* 跳转按钮部分 */}
+            <div className="love-section transition-section" ref={(el) => {
+                sectionRefs.current[9] = el
+            }}>
+                <div className="transition-content">
+                    <div className="transition-text">
+                        <h2>就当一个小游戏玩玩，不知道你有刷到过嘛。</h2>
+                        <button 
+                            className="love-confession-button"
+                            onClick={() => navigate('/love-confession')}
+                        >
+                            点击进入小游戏
+                        </button>
                     </div>
                 </div>
             </div>

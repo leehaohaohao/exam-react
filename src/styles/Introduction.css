@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .introduction-container {
     position: fixed;
     top: 0;
@@ -11,6 +19,7 @@
     z-index: 1001;
     transition: opacity 1s ease-in-out;
     overflow: hidden;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .introduction-container::before {
@@ -40,6 +49,7 @@
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .introduction-title {
@@ -49,6 +59,7 @@
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards;
     position: relative;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .introduction-title::before,
@@ -78,6 +89,7 @@
     transform: translateY(20px);
     animation: fadeInUp 1s ease forwards 0.3s;
     position: relative;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .introduction-description::before {

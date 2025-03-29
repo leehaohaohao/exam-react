@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .opening-container {
     position: fixed;
     top: 0;
@@ -57,7 +65,7 @@
     align-items: center;
     font-size: 2rem; /* 增大字体 */
     color: #fff;
-    font-family: "Georgia", serif; /* 使用更优雅的字体 */
+    font-family: 'LXGWWenKaiMono', sans-serif;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* 文字阴影 */
 }

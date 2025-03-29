@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { ImageState } from "./types.ts";
+import { useNavigate } from 'react-router-dom';
 import "./LoveConfession.css"
 
 const LoveConfession: React.FC = () => {
+    const navigate = useNavigate();
     const [clickCount, setClickCount] = useState(0);
     const [imageState, setImageState] = useState<ImageState>('heart');
     const [showSuccess, setShowSuccess] = useState(false);
@@ -15,7 +17,8 @@ const LoveConfession: React.FC = () => {
         "我会很伤心…",
         "啊，真的嘛",
         "不嘛不嘛",
-        "不行:("
+        "不行:(",
+        "悲痛欲绝"
     ];
 
     const handleNoClick = () => {
@@ -31,6 +34,10 @@ const LoveConfession: React.FC = () => {
     const handleYesClick = () => {
         setImageState('hug');
         setShowSuccess(true);
+    };
+
+    const handleBackToHome = () => {
+        navigate('/');
     };
 
     const getImageSrc = () => {
@@ -50,6 +57,9 @@ const LoveConfession: React.FC = () => {
                 <div className="success-content">
                     <h1 className="success-text">!!!喜欢你!! ( &gt;᎑&lt;)♡︎ᐝ</h1>
                     <img src={getImageSrc()} alt="拥抱" className="success-image" />
+                    <button className="back-home-button" onClick={handleBackToHome}>
+                        返回首页
+                    </button>
                 </div>
             </div>
         );
@@ -69,7 +79,7 @@ const LoveConfession: React.FC = () => {
                         className="lc-question"
                         style={{transform: `translateY(-${clickCount * 25}px)`}}
                     >
-                        常公主，可以做我女朋友嘛？
+                        那个，就是考虑考虑做我女朋友？
                     </h1>
                     <div className="lc-buttons">
                         <button
@@ -77,7 +87,7 @@ const LoveConfession: React.FC = () => {
                             onClick={handleYesClick}
                             style={{transform: `scale(${1 + (clickCount * 1.2)})`}}
                         >
-                            必须可以
+                            可以滴
                         </button>
                         <button
                             className="lc-no-button"

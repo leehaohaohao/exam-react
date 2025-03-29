@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
 
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .confirm-dialog-overlay {
     position: fixed;
     top: 0;
@@ -61,7 +69,7 @@
 }
 
 .confirm-message {
-    font-family: 'ZCOOL KuaiLe', cursive;
+    font-family: 'LXGWWenKaiMono', sans-serif;
     font-size: 16px;
     color: #ff69b4;
     margin-bottom: 24px;
@@ -102,7 +110,7 @@
     padding: 12px 32px;
     border-radius: 25px;
     border: none;
-    font-family: 'ZCOOL KuaiLe', cursive;
+    font-family: 'LXGWWenKaiMono', sans-serif;
     font-size: 16px;
     cursor: pointer;
     transition: all 0.3s ease;

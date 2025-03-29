@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
   margin: 0;
   padding: 0;
-  font-family: "Arial", sans-serif;
+  font-family: 'LXGWWenKaiMono', sans-serif;
   color: #fff;
   overflow: hidden;
   width: 100vw;

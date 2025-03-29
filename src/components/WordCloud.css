@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .word-cloud-container {
     position: relative;
     width: 100%;
@@ -13,6 +21,7 @@
     align-items: center;
     gap: 1.5rem;
     overflow: visible;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .word-bubble {
@@ -30,6 +39,7 @@
     white-space: nowrap;
     opacity: 0;
     animation: fadeIn 0.6s ease forwards;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .word-bubble:hover {

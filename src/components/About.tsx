@@ -164,13 +164,19 @@ const timelineData: TimelineItem[] = [
         year: "2025-3-29 17:12",
         title: "接近收尾",
         description: "神秘板块大体完成",
-        image: "/images/line/24.jpg"
+        image: "/images/default.png"
     },
     {
         year: "2025-3-29 17:50",
         title: "oh yeah",
         description: "首页一个bug修复掉了，图片切换不会有概率出现问题喽",
-        image: "/images/line/24.jpg"
+        image: "/images/line/25.jpg"
+    },
+    {
+        year: "2025-3-29 19:10",
+        title: "小猫集成完毕",
+        description: "有一点点紧张了",
+        image: "/images/default.png"
     },
 ];
 
@@ -273,28 +279,31 @@ const About: React.FC = () => {
                                     <div className="design-detail-item with-image">
                                         <h3>过去</h3>
                                         <div className="design-detail-content">
+                                            <p>昨日种种，皆为序章</p>
                                             <div className="design-detail-image">
-                                                <img src="/images/logo1.png" alt="艺术字设计" />
+                                                <img src="/images/logo1.png" alt="艺术字设计"/>
                                             </div>
-                                            <p>hahaha</p>
+                                            <p>让过去成为现在的开始，过去的就让他过去吧，翻过旧篇章，开启新篇章</p>
                                         </div>
                                     </div>
                                     <div className="design-detail-item with-image">
                                         <h3>现在</h3>
                                         <div className="design-detail-content">
+                                            <p>当下即景，步步生花</p>
                                             <div className="design-detail-image">
-                                                <img src="/images/logo2.png" alt="艺术字设计" />
+                                                <img src="/images/logo2.png" alt="艺术字设计"/>
                                             </div>
-                                            <p>哈哈</p>
+                                            <p>珍惜当下，步步都是美好，步步生花！</p>
                                         </div>
                                     </div>
                                     <div className="design-detail-item with-image">
                                         <h3>未来</h3>
                                         <div className="design-detail-content">
+                                            <p>心之所向，素履以往</p>
                                             <div className="design-detail-image">
-                                                <img src="/images/logo3.png" alt="艺术字设计" />
+                                                <img src="/images/logo3.png" alt="艺术字设计"/>
                                             </div>
-                                            <p>啊哈哈</p>
+                                            <p>对未来抱有期待，自信一点，来日方长</p>
                                         </div>
                                     </div>
                                     <div className="design-detail-item without-image">
@@ -307,7 +316,7 @@ const About: React.FC = () => {
                                         <h3>开幕左右文字上下浮动</h3>
                                         <div className="design-detail-content">
                                             <div className="design-detail-image">
-                                                <img src="/images/design/1.png" alt="艺术字设计" />
+                                                <img src="/images/design/1.png" alt="艺术字设计"/>
                                             </div>
                                             <p>我感觉很酷，那种法术经文上下运转。里面也都是祝福的文字，祝福的话呢虽然是口头上的，但也是真心希望可以实现的</p>
                                         </div>
@@ -316,7 +325,7 @@ const About: React.FC = () => {
                                         <h3>照片墙</h3>
                                         <div className="design-detail-content">
                                             <div className="design-detail-image">
-                                                <img src="/images/design/2.png" alt="艺术字设计" />
+                                                <img src="/images/design/2.png" alt="艺术字设计"/>
                                             </div>
                                             <p>这个我想做一个可以用来展示一些纪念的图片</p>
                                         </div>
@@ -339,6 +348,12 @@ const About: React.FC = () => {
                                             <p>**************</p>
                                         </div>
                                     </div>
+                                    <div className="design-detail-item without-image">
+                                        <h3>请允许我在这里发个牢骚</h3>
+                                        <div className="design-detail-content">
+                                            <p>将近一个月的开发，6000行代码。平常都只是负责底层的逻辑，不是这种直观页面的，做的有点累的，我滴乖乖，尤其那个动画设计，难怪说搞页面的是心累，搞底层的是头发挠秃也解决不了bug，啊哈哈</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -349,11 +364,20 @@ const About: React.FC = () => {
                                 <div className="easter-egg-grid">
                                     <div className="easter-egg-item">
                                         <div className="easter-egg-content">
-                                            <h3>首页彩蛋</h3>
+                                            <h3>首页彩蛋-1</h3>
                                             <p>首页的3个艺术字里各自有cjw有没有注意到呢？cjw字形也有特殊的地方哦。</p>
                                         </div>
                                         <div className="easter-egg-image">
-                                            <img src="/images/easter/4.png" alt="星星彩蛋" />
+                                            <img src="/images/easter/4.png" alt="爱心彩蛋"/>
+                                        </div>
+                                    </div>
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>首页彩蛋-2</h3>
+                                            <p>首页的3个艺术字里每个字都有个爱心设计</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/easter/6.png" alt="爱心彩蛋"/>
                                         </div>
                                     </div>
                                     <div className="easter-egg-item">
@@ -362,7 +386,7 @@ const About: React.FC = () => {
                                             <p>在照片墙里的照片可以点击翻转的哦，可能有点冒昧，但好看</p>
                                         </div>
                                         <div className="easter-egg-image">
-                                            <img src="/images/easter/1.png" alt="照片墙彩蛋" />
+                                            <img src="/images/easter/1.png" alt="照片墙彩蛋"/>
                                         </div>
                                     </div>
                                     <div className="easter-egg-item">
@@ -371,10 +395,18 @@ const About: React.FC = () => {
                                             <p>在时间线页面点击底部，会出现可爱的小心心！（忽略此条，重大bug，连d老师都无能为力）</p>
                                         </div>
                                         <div className="easter-egg-image">
-                                            <img src="/images/easter/5.png" alt="心形彩蛋" />
+                                            <img src="/images/easter/5.png" alt="爱心彩蛋"/>
                                         </div>
                                     </div>
-                                    
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>神秘板块彩蛋</h3>
+                                            <p>ps:花朵个数</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/default.png" alt="玫瑰花彩蛋"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

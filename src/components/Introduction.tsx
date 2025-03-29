@@ -32,7 +32,7 @@ const Introduction: React.FC<IntroductionProps> = ({ onStart }) => {
                     由于服务器带宽很低，所以图片等资源加载很慢，如果可以耐心等待一下或者先简单看一遍，第二遍有图片缓存会更有体验感。
                 </p>
                 <p className="introduction-description">
-                    温馨提示:有彩蛋的哦,不止1个哦。
+                    温馨提示:有彩蛋的哦，大部分上是设计上的彩蛋，有两个交互彩蛋。
                 </p>
                 <p className="introduction-description">
                     另外页面里有提供有相关图片、网页图片等资源下载链接哦。

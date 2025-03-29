@@ -1,8 +1,9 @@
 @font-face {
-    font-family: 'MyCustomFont'; /* 给字体起一个名字 */
-    src: url("public/font/LXGWWenKaiMono-Regular.ttf") format('truetype');
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 .barrage-container {
@@ -20,7 +21,7 @@
     white-space: nowrap;
     font-size: 2.5rem;
     font-weight: bold;
-    font-family: 'MyCustomFont', sans-serif;
+    font-family: 'LXGWWenKaiMono', sans-serif;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5), 0 0 10px rgba(255, 215, 0, 0.8);
     background: linear-gradient(90deg, #ffcc00, #ffd700, #ffdf00);
     background-size: 200% 100%;

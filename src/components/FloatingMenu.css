@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 .floating-menu {
     position: fixed;
     bottom: 20px;
@@ -12,6 +20,7 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .menu-item {
@@ -68,6 +77,7 @@
     transition: all 0.3s ease;
     opacity: 0;
     white-space: nowrap;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .heart-icon {

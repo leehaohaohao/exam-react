@@ -150,6 +150,23 @@
     display: block;
 }
 
+.back-home-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 4vw;
+    background-color: #d4818e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.back-home-button:hover {
+    background-color: #c06b7a;
+    transform: scale(1.05);
+}
+
 /* 桌面样式 */
 @media (min-width: 768px) {
     .success-text {
@@ -158,5 +175,9 @@
 
     .success-image {
         width: 300px;
+    }
+
+    .back-home-button {
+        font-size: 18px;
     }
 }

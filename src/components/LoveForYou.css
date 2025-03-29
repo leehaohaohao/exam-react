@@ -439,3 +439,26 @@
         opacity: 1;
     }
 }
+
+.love-confession-button {
+    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+    font-family: 'LXGWWenKaiMono', sans-serif;
+}
+
+.love-confession-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+.love-confession-button:active {
+    transform: translateY(0);
+}
