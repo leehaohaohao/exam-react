@@ -180,8 +180,8 @@ const timelineData: TimelineItem[] = [
     },
     {
         year: "2025-3-29 20:30",
-        title: "有种释怀的感觉，正式发布Version-5.2.1",
-        description: "有一点点紧张了",
+        title: "End or Start",
+        description: "正式发布Version-5.2.1",
         image: "/images/line/26.jpg"
     },
 ];
@@ -355,9 +355,15 @@ const About: React.FC = () => {
                                         </div>
                                     </div>
                                     <div className="design-detail-item without-image">
+                                        <h3>很多很多交互细节</h3>
+                                        <div className="design-detail-content">
+                                            <p>这里就不展开啦，按钮的交互、图片、文字排版布局都是精细设计过的，说多了就太长篇大论了。普通的网站啊，那种你肯定也深有体会，点击按钮什么的没有一点点交互的感觉的。</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item without-image">
                                         <h3>请允许我在这里发个牢骚</h3>
                                         <div className="design-detail-content">
-                                            <p>将近一个月的开发，6000行代码。平常都只是负责底层的逻辑，不是这种直观页面的，做的有点累的，我滴乖乖，尤其那个动画设计，难怪说搞页面的是心累，搞底层的是头发挠秃也解决不了bug，啊哈哈</p>
+                                            <p>将近一个月的开发，6000行代码。平常都只是负责底层的逻辑，不是这种直观页面的，做的有点累的，我滴乖乖，尤其那个动画设计，难怪说搞页面的是心累，搞底层的是头发挠秃也解决不了bug，啊哈哈。另外网上普遍一些爱心啊圣诞树不过百行代码，没那个艺术细胞设计的不好看哈哈，我做的又丑又抽象，早知道留个照片也可以让你看个笑话。</p>
                                         </div>
                                     </div>
                                 </div>
@@ -413,6 +419,15 @@ const About: React.FC = () => {
                                             <img src="/images/default.png" alt="玫瑰花彩蛋"/>
                                         </div>
                                     </div>
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>地址栏彩蛋</h3>
+                                            <p>808，简单理解就是每个网站都需要一个唯一数字标识，选的808，没有0808这种格式。</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/easter/7.png" alt="玫瑰花彩蛋"/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -425,7 +440,7 @@ const About: React.FC = () => {
                                         <div className="download-icon">🎨</div>
                                         <div className="download-info">
                                             <h3>设计素材</h3>
-                                            <p>包含自己设计制作的图</p>
+                                            <p>自己设计制作的图</p>
                                         </div>
                                     </a>
                                 </div>

@@ -8,12 +8,15 @@ import "./Barrage.css";
 import { Barrage } from "../define/types";
 
 const messages: string[] = [
-    "美的不像话",
+    "美 的 不 像 话",
     "亿点漂亮，亿点迷人",
     "温柔善良，美若天仙",
     "沉鱼落雁，闭月羞花，倾城倾国，国色天香",
     "蒹葭苍苍，白露为霜。所谓伊人，在水一方",
-    "九天玄女",
+    "九  天  玄  女",
+    "秀  色  可  餐",
+    "你是人间限量款，独一无二",
+    "风  华  绝  代",
 ];
 const BarrageComponent: React.FC = () => {
     const [barrages, setBarrages] = useState<Barrage[]>([]);

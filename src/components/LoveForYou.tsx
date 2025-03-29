@@ -14,7 +14,7 @@ const LoveForYou = () => {
 
     const personalityWords = [
         "上进心", "优柔寡断", "完美主义", "边界感", "放空思考",
-        "乐观", "包容心", "有耐心", "迷茫", "运动",
+        "乐观", "包容心", "有耐心", "迷茫", "运动","不喜欢冷战",
         "换位思考", "察言观色", "笨拙", "真诚", "细心","内向"
     ];
 
@@ -56,8 +56,19 @@ const LoveForYou = () => {
                     <div className="love-intro-content">
                         <div className="love-intro-section">
                             <h3>我想可能还不是很了解我？</h3>
-                            <p>在不过也没事哒，我希望还会有很多时间了解。现在先通过这个页面，让你了解一个真实的我，有机会，也可以以后对比对比看看我有没有说谎呢。接下来，我会从不同的角度，带你认识我。</p>
+                            <p>我希望还会有很多时间了解。现在先通过这个页面，让你了解一个真实的我，有机会，也可以以后对比对比看看我有没有说谎呢。接下来，我会从不同的角度，带你认识我。</p>
                         </div>
+                    </div>
+                    <div className="scroll-indicator">
+                        <svg width="30" height="50" viewBox="0 0 30 50">
+                            <path
+                                d="M15 0 L15 40 M5 30 L15 40 L25 30"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                fill="none"
+                                className="scroll-path"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -162,7 +173,7 @@ const LoveForYou = () => {
                     <div className="transition-text">
                         <h2>步入正题</h2>
                         <p>我想将上面的词云在多填充一点无论缺点优点</p>
-                        <p>看累了嘛，不说太多了</p>
+                        <p>这回不说太多啦</p>
                     </div>
                 </div>
             </div>
@@ -174,15 +185,26 @@ const LoveForYou = () => {
                     <img src="/images/flowers.png" alt="Love Image 5"/>
                     <div className="love-text-container">
                         <h2>To 小常同学</h2>
-                        <p>思虑良久，附带背景玫瑰花束当今奉上。</p>
+                        <p>思虑良久，附带背景手绘玫瑰花束当今奉上。</p>
                         <p>不知这一份礼物可还满意？再写一封情书给你啦，没有华丽的辞藻，只有一些碎碎念。</p>
                         <p>一见钟情不适用我，我不会因为容貌来喜欢上一个人。我只相信感觉，但是你是两者兼备。哪成想年少萌生的情愫，到了20岁再次破土生长。想用一段段话形容你，或许是文笔有限，文字难以描述与你相处给我带来的喜悦。不懂什么是浪漫，懂得是想把最好的给你，懂得是想日常所见所闻连同这块颗滚烫的心熔铸成世间最特别的礼物送给你。那些担心顾虑也总是会因你的一条条消息烟消云散。</p>
                         <p>这份礼物希望能在你的生命中留下一道微光，哪怕陪你走到最后的不是我。如果觉得唐突，那就放做是一株迟开的花，不必急着采摘，让它在微风中轻轻摇曳就好。我喜欢你，是我的事，如果你能接受那自然然是极好。如果你拒绝那也不怪你，是我还不够优秀仍需努力。唯愿你岁岁平安。</p>
                         <p>「我喜欢你」是假话。</p>
-                        <p>上一句也是假话。</p>
+                        <p> 上一句也是假话。</p>
                         <div className="signature">
                             lh by 2025-3-29
                         </div>
+                    </div>
+                    <div className="scroll-indicator">
+                        <svg width="30" height="50" viewBox="0 0 30 50">
+                            <path
+                                d="M15 0 L15 40 M5 30 L15 40 L25 30"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                fill="none"
+                                className="scroll-path"
+                            />
+                        </svg>
                     </div>
                 </div>
             </div>
