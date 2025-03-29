@@ -4,7 +4,7 @@
  * @date 2025/3/23 22:32
  */
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 import "./FloatingMenu.css";
 import ConfirmDialog from "./ConfirmDialog";
 
@@ -64,7 +64,7 @@ const FloatingMenu: React.FC = () => {
                     setSelectedPath(null);
                 }}
                 onConfirm={handleConfirm}
-                message="✨ 「接下来的内容，可能需要一点点心理准备哦。」     这个页面会一直在这里，不会消失，也不会过期——所以，不用急着点进来。                                                               如果你准备好了，或者只是单纯好奇……都可以随时打开它。毕竟，这是写给你的。                                                当然，你看或不看，我都不会知道。但如果你愿意，我希望它能成为故事里的开头。"
+                message="✨ 「接下来的内容，可能需要一点点心理准备哦。」     这个页面会一直在这里，不会消失，也不会过期——所以，不用急着点进来，别的页面没有体验先去体验体验。                                                               如果你准备好了，或者只是单纯好奇……都可以随时打开。因为，这是写给你一个人的。                                                当然，你看或不看，我都不会知道。但如果你愿意，我希望这能成为故事里的开头。"
                 confirmText="我想好啦！"
                 cancelText="再想想~"
             />

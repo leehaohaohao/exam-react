@@ -37,15 +37,22 @@ const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
 
                 // 延迟一段时间后切换图片和背景，并重新添加动画类
                 setTimeout(() => {
-                    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % logos.length);
-                    setBackgroundGradient(gradients[(currentImageIndex + 1) % gradients.length]);
-                    setPlayAnimation(true); // 重新触发动画
-                }, 50); // 50ms 的延迟确保类名被移除后再添加
-            }, 7000); // 每 3 秒切换一次图片和背景
+                    const nextIndex = (currentImageIndex + 1) % logos.length;
+                    setCurrentImageIndex(nextIndex);
+                    setBackgroundGradient(gradients[nextIndex]);
+                    // 确保在下一个事件循环中添加动画类
+                    requestAnimationFrame(() => {
+                        setPlayAnimation(true);
+                    });
+                }, 50);
+            }, 7000);
 
-            return () => clearInterval(interval); // 清除定时器
+            return () => {
+                clearInterval(interval);
+                setPlayAnimation(false);
+            };
         }
-    }, [animate, currentImageIndex, logos.length, gradients.length]);
+    }, [animate, currentImageIndex, logos.length, gradients]);
 
     return (
         <>
@@ -54,6 +61,7 @@ const ArtText: React.FC<ArtTextProps> = ({ animate }) => {
             <div className="art-text">
                 <div className="image-container">
                     <img
+                        key={currentImageIndex} // 添加 key 属性强制重新渲染
                         src={logos[currentImageIndex]}
                         alt="透明背景图片"
                         className={playAnimation ? "fade-in-bounce" : ""}

@@ -18,20 +18,20 @@ interface Heart {
 const timelineData: TimelineItem[] = [
     {
         year: "2025-3-7",
-        title: "朋友商量",
-        description: "也是得到了认可",
+        title: "初步商讨可行性",
+        description: "这太可行了",
         image: "/images/line/1.jpg"
     },
     {
         year: "2025-3-8",
-        title: "小小和朋友谋划看了点例子",
-        description: "可让我朋友羡慕坏了",
+        title: "开始谋划看了点例子",
+        description: "Ok啊，理工男有理工男的方式",
         image: "/images/line/2.jpg"
     },
     {
         year: "2025-3-12",
         title: "跑了个5.2km",
-        description: "第二次跑5km，第一次还是别人带着才跑完，不然坚持不下去。这回很有冲劲，可能是跑完5.2km就可以完赛给你送奖牌所以很有干劲吧，3km的时候有点累，但一想到可以送你奖牌又不累了。哈哈，我跑完还特意挑个17.20分发的，下午5.20嘛，不过好像你在忙，反应不是很大，不过不怪你哦，有些时候会做一些感动自己的举动，但其实别人并不理解或者不知道，所以还是要沟通说出来嘛。",
+        description: "第二次跑5km，第一次还是别人带着才跑完，不然坚持不下去。这回很有冲劲，可能是跑完5.2km就可以完赛给你送奖牌所以很有干劲吧，3km的时候有点累，但一想到可以送你奖牌又不累了。哈哈，我跑完还特意挑个17.20分发的，下午5.20嘛，不过好像你在忙，反应不是很大或者不理解但尊重，哈哈",
         image: "/images/line/7.jpg"
     },
     {
@@ -55,7 +55,7 @@ const timelineData: TimelineItem[] = [
     {
         year: "2025-3-18",
         title: "你不开心",
-        description: "你不是很开心，我又很笨不知道说什么，想转移一下你注意力，就提前透露啦，不过为啥没展示里面，因为就只有个首页，里面巨丑",
+        description: "你不是很开心，想转移一下你注意力，就提前透露啦，不过为啥没展示里面，因为就只有个首页，里面巨丑",
         image: "/images/line/9.jpg"
     },
     {
@@ -91,7 +91,7 @@ const timelineData: TimelineItem[] = [
     {
         year: "2025-3-25",
         title: "你的心情好像好很多",
-        description: "不敢多说话，感觉平常的道晚安什么的现在这个时期不太合适，想尽可能说少点但可以让你开心点的。无意间看到天鹅，翻相册找到去年的天鹅宝宝发你，你的心情确实好很多，又聊了很多呢。",
+        description: "不敢多说话，感觉平常的道晚安什么的现在这个时期不太合适，想尽可能说少点但可以让你开心点的。无意间看到天鹅，翻相册找到去年的天鹅宝宝发你，你的心情确实好很多。",
         image: "/images/line/13.jpg"
     },
     {
@@ -154,6 +154,24 @@ const timelineData: TimelineItem[] = [
         description: "毁灭吧，毁灭吧，刚修好上面一个bug，你咋也不动了",
         image: "/images/line/23.jpg"
     },
+    {
+        year: "2025-3-28 23:32",
+        title: "里程碑版本",
+        description: "多个页面优化，效果越来越好了，当然修不好的bug也是越来越修不好",
+        image: "/images/line/24.jpg"
+    },
+    {
+        year: "2025-3-29 17:12",
+        title: "接近收尾",
+        description: "神秘板块大体完成",
+        image: "/images/line/24.jpg"
+    },
+    {
+        year: "2025-3-29 17:50",
+        title: "oh yeah",
+        description: "首页一个bug修复掉了，图片切换不会有概率出现问题喽",
+        image: "/images/line/24.jpg"
+    },
 ];
 
 const About: React.FC = () => {
@@ -175,256 +193,258 @@ const About: React.FC = () => {
     };
 
     return (
-        <div className="about-wrapper">
+        <>
             <Link to="/" className="back-button">
                 返回首页
             </Link>
-            <div className="about-page">
-                <div className="about-hero">
-                    <div className="hero-content">
-                        <h1 className="animate-title">作品历程</h1>
-                        <p className="animate-subtitle">About Story</p>
-                    </div>
-                </div>
-                <div className="about-content">
-                    <div className="about-section">
-                        <h2>关于作品</h2>
-                        <div className="credits-container">
-                            <div className="credits-group">
-                                <h3>制作团队</h3>
-                                <div className="credits-item">
-                                    <span className="role">总策划</span>
-                                    <span className="name">李昊</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">设计总监</span>
-                                    <span className="name">leehao</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">技术总监</span>
-                                    <span className="name">李哈</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">内容编辑</span>
-                                    <span className="name">lihao</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">背锅侠</span>
-                                    <span className="name">李日天</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">待定身份</span>
-                                    <span className="name">待定人</span>
-                                </div>
-                            </div>
-                            <div className="credits-group">
-                                <h3>特别致谢</h3>
-                                <div className="credits-item">
-                                    <span className="role">特邀嘉宾</span>
-                                    <span className="name">常静雯</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">领衔主演</span>
-                                    <span className="name">常仙女</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">中央政委</span>
-                                    <span className="name">常公主</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">首席体验官</span>
-                                    <span className="name">常陛下</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">终身荣誉顾问</span>
-                                    <span className="name">常老板</span>
-                                </div>
-                                <div className="credits-item">
-                                    <span className="role">待定身份</span>
-                                    <span className="name">待定人</span>
-                                </div>
-                            </div>
+            <div className="about-wrapper">
+                <div className="about-page">
+                    <div className="about-hero">
+                        <div className="hero-content">
+                            <h1 className="animate-title">作品历程</h1>
+                            <p className="animate-subtitle">About Story</p>
                         </div>
                     </div>
-                    <div className="design-details-section">
-                        <div className="design-details-container">
-                            <h2>设计细节</h2>
-                            <p>介绍一下设计想法</p>
-                            <div className="design-details-grid">
-                                <div className="design-detail-item with-image">
-                                    <h3>过去</h3>
-                                    <div className="design-detail-content">
-                                        <div className="design-detail-image">
-                                            <img src="/images/logo1.png" alt="艺术字设计" />
-                                        </div>
-                                        <p>hahaha</p>
+                    <div className="about-content">
+                        <div className="about-section">
+                            <h2>关于作品</h2>
+                            <div className="credits-container">
+                                <div className="credits-group">
+                                    <h3>制作团队</h3>
+                                    <div className="credits-item">
+                                        <span className="role">总策划</span>
+                                        <span className="name">李昊</span>
+                                    </div>
+                                    <div className="credits-item">
+                                        <span className="role">设计总监</span>
+                                        <span className="name">leehao</span>
+                                    </div>
+                                    <div className="credits-item">
+                                        <span className="role">技术总监</span>
+                                        <span className="name">李哈</span>
+                                    </div>
+                                    <div className="credits-item">
+                                        <span className="role">内容编辑</span>
+                                        <span className="name">lihao</span>
+                                    </div>
+                                    <div className="credits-item">
+                                        <span className="role">背锅侠</span>
+                                        <span className="name">李日天</span>
+                                    </div>
+                                    <div className="credits-item">
+                                        <span className="role">待定身份</span>
+                                        <span className="name">待定人</span>
                                     </div>
                                 </div>
-                                <div className="design-detail-item with-image">
-                                    <h3>现在</h3>
-                                    <div className="design-detail-content">
-                                        <div className="design-detail-image">
-                                            <img src="/images/logo2.png" alt="艺术字设计" />
-                                        </div>
-                                        <p>哈哈</p>
+                                <div className="credits-group">
+                                    <h3>特别致谢</h3>
+                                    <div className="credits-item">
+                                        <span className="role">特邀嘉宾</span>
+                                        <span className="name">常静雯</span>
                                     </div>
-                                </div>
-                                <div className="design-detail-item with-image">
-                                    <h3>未来</h3>
-                                    <div className="design-detail-content">
-                                        <div className="design-detail-image">
-                                            <img src="/images/logo3.png" alt="艺术字设计" />
-                                        </div>
-                                        <p>啊哈哈</p>
+                                    <div className="credits-item">
+                                        <span className="role">领衔主演</span>
+                                        <span className="name">常仙女</span>
                                     </div>
-                                </div>
-                                <div className="design-detail-item without-image">
-                                    <h3>配色</h3>
-                                    <div className="design-detail-content">
-                                        <p>整个网站呢采用的都是些温柔的渐变色调，希望你能够喜欢</p>
+                                    <div className="credits-item">
+                                        <span className="role">中央政委</span>
+                                        <span className="name">常公主</span>
                                     </div>
-                                </div>
-                                <div className="design-detail-item with-image">
-                                    <h3>开幕左右文字上下浮动</h3>
-                                    <div className="design-detail-content">
-                                        <div className="design-detail-image">
-                                            <img src="/images/design/1.png" alt="艺术字设计" />
-                                        </div>
-                                        <p>我感觉很酷，那种法术经文上下运转。里面也都是祝福的文字，祝福的话呢虽然是口头上的，但也是真心希望可以实现的</p>
+                                    <div className="credits-item">
+                                        <span className="role">首席体验官</span>
+                                        <span className="name">常陛下</span>
                                     </div>
-                                </div>
-                                <div className="design-detail-item with-image">
-                                    <h3>照片墙</h3>
-                                    <div className="design-detail-content">
-                                        <div className="design-detail-image">
-                                            <img src="/images/design/2.png" alt="艺术字设计" />
-                                        </div>
-                                        <p>这个我想做一个可以用来展示一些纪念的图片</p>
+                                    <div className="credits-item">
+                                        <span className="role">终身荣誉顾问</span>
+                                        <span className="name">常老板</span>
                                     </div>
-                                </div>
-                                <div className="design-detail-item without-image">
-                                    <h3>问卷</h3>
-                                    <div className="design-detail-content">
-                                        <p>哈哈，其实本来还想集成圣诞树那些，啊呀，大话说早了，我可以做但是做的太丑了，就不要了换成问卷了，我希望这个网站不是第一个，换句话说这个可以一直记录下去。</p>
-                                    </div>
-                                </div>
-                                <div className="design-detail-item without-image">
-                                    <h3>关于</h3>
-                                    <div className="design-detail-content">
-                                        <p>就是想介绍一下整个作品的实现吧，好像这个关于板块比其他做的还好看点，而且内容丰富点。</p>
-                                    </div>
-                                </div>
-                                <div className="design-detail-item without-image">
-                                    <h3>神秘板块</h3>
-                                    <div className="design-detail-content">
-                                        <p>**************</p>
+                                    <div className="credits-item">
+                                        <span className="role">待定身份</span>
+                                        <span className="name">待定人</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="easter-egg-section">
-                        <div className="easter-egg-container">
-                            <h2>彩蛋专区</h2>
-                            <p>一些有趣的小发现</p>
-                            <div className="easter-egg-grid">
-                                <div className="easter-egg-item">
-                                    <div className="easter-egg-content">
-                                        <h3>首页彩蛋</h3>
-                                        <p>首页的3个艺术字里各自有cjw有没有注意到呢？cjw字形也有特殊的地方哦。</p>
-                                    </div>
-                                    <div className="easter-egg-image">
-                                        <img src="/images/easter/4.png" alt="星星彩蛋" />
-                                    </div>
-                                </div>
-                                <div className="easter-egg-item">
-                                    <div className="easter-egg-content">
-                                        <h3>照片墙彩蛋</h3>
-                                        <p>在照片墙里的照片可以点击翻转的哦，可能有点冒昧，但好看</p>
-                                    </div>
-                                    <div className="easter-egg-image">
-                                        <img src="/images/easter/1.png" alt="照片墙彩蛋" />
-                                    </div>
-                                </div>
-                                <div className="easter-egg-item">
-                                    <div className="easter-egg-content">
-                                        <h3>时间线彩蛋</h3>
-                                        <p>在时间线页面点击底部，会出现可爱的小心心！（忽略此条，重大bug，连d老师都无能为力）</p>
-                                    </div>
-                                    <div className="easter-egg-image">
-                                        <img src="/images/easter/5.png" alt="心形彩蛋" />
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                    <div className="download-section">
-                        <div className="download-container">
-                            <h2>素材下载</h2>
-                            <p>高清设计素材，欢迎下载收藏</p>
-                            <div className="download-grid">
-                                <a href="/downloads/designs.zip" className="download-item">
-                                    <div className="download-icon">🎨</div>
-                                    <div className="download-info">
-                                        <h3>设计素材</h3>
-                                        <p>包含所有插图、艺术字设计</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="timeline-section">
-                    <div className="timeline-header">
-                        <h2>时间线</h2>
-                        <p>作品的故事，从这里开始</p>
-                    </div>
-                    <div className="timeline-container">
-                        {timelineData.map((item, index) => (
-                            <div key={index} className="timeline-item">
-                                <div className="timeline-content">
-                                    <div className="timeline-year">{item.year}</div>
-                                    <div className="timeline-details">
-                                        <h2>{item.title}</h2>
-                                        <p>{item.description}</p>
-                                        {item.image && (
-                                            <div className="timeline-image">
-                                                <img src={item.image} alt={item.title} />
+                        <div className="design-details-section">
+                            <div className="design-details-container">
+                                <h2>设计细节</h2>
+                                <p>介绍一下设计想法</p>
+                                <div className="design-details-grid">
+                                    <div className="design-detail-item with-image">
+                                        <h3>过去</h3>
+                                        <div className="design-detail-content">
+                                            <div className="design-detail-image">
+                                                <img src="/images/logo1.png" alt="艺术字设计" />
                                             </div>
-                                        )}
+                                            <p>hahaha</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item with-image">
+                                        <h3>现在</h3>
+                                        <div className="design-detail-content">
+                                            <div className="design-detail-image">
+                                                <img src="/images/logo2.png" alt="艺术字设计" />
+                                            </div>
+                                            <p>哈哈</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item with-image">
+                                        <h3>未来</h3>
+                                        <div className="design-detail-content">
+                                            <div className="design-detail-image">
+                                                <img src="/images/logo3.png" alt="艺术字设计" />
+                                            </div>
+                                            <p>啊哈哈</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item without-image">
+                                        <h3>配色</h3>
+                                        <div className="design-detail-content">
+                                            <p>整个网站呢采用的都是些温柔的渐变色调，希望你能够喜欢</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item with-image">
+                                        <h3>开幕左右文字上下浮动</h3>
+                                        <div className="design-detail-content">
+                                            <div className="design-detail-image">
+                                                <img src="/images/design/1.png" alt="艺术字设计" />
+                                            </div>
+                                            <p>我感觉很酷，那种法术经文上下运转。里面也都是祝福的文字，祝福的话呢虽然是口头上的，但也是真心希望可以实现的</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item with-image">
+                                        <h3>照片墙</h3>
+                                        <div className="design-detail-content">
+                                            <div className="design-detail-image">
+                                                <img src="/images/design/2.png" alt="艺术字设计" />
+                                            </div>
+                                            <p>这个我想做一个可以用来展示一些纪念的图片</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item without-image">
+                                        <h3>问卷</h3>
+                                        <div className="design-detail-content">
+                                            <p>哈哈，其实本来还想集成圣诞树那些，啊呀，大话说早了，我可以做但是做的太丑了，就不要了换成问卷了，我希望这个网站不是第一个，换句话说这个可以一直记录下去。</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item without-image">
+                                        <h3>关于</h3>
+                                        <div className="design-detail-content">
+                                            <p>就是想介绍一下整个作品的实现吧，好像这个关于板块比其他做的还好看点，而且内容丰富点。</p>
+                                        </div>
+                                    </div>
+                                    <div className="design-detail-item without-image">
+                                        <h3>神秘板块</h3>
+                                        <div className="design-detail-content">
+                                            <p>**************</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="footer-section" onClick={handleFooterClick}>
-                    <div className="footer-content">
-                        <div className="footer-text">
-                            <span className="footer-build">Build for CJW</span>
-                            <span className="footer-author">by 李昊</span>
-                            <span className="footer-year">2025</span>
                         </div>
-                        <div className="footer-line"></div>
+                        <div className="easter-egg-section">
+                            <div className="easter-egg-container">
+                                <h2>彩蛋专区</h2>
+                                <p>一些有趣的小发现</p>
+                                <div className="easter-egg-grid">
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>首页彩蛋</h3>
+                                            <p>首页的3个艺术字里各自有cjw有没有注意到呢？cjw字形也有特殊的地方哦。</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/easter/4.png" alt="星星彩蛋" />
+                                        </div>
+                                    </div>
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>照片墙彩蛋</h3>
+                                            <p>在照片墙里的照片可以点击翻转的哦，可能有点冒昧，但好看</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/easter/1.png" alt="照片墙彩蛋" />
+                                        </div>
+                                    </div>
+                                    <div className="easter-egg-item">
+                                        <div className="easter-egg-content">
+                                            <h3>时间线彩蛋</h3>
+                                            <p>在时间线页面点击底部，会出现可爱的小心心！（忽略此条，重大bug，连d老师都无能为力）</p>
+                                        </div>
+                                        <div className="easter-egg-image">
+                                            <img src="/images/easter/5.png" alt="心形彩蛋" />
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div className="download-section">
+                            <div className="download-container">
+                                <h2>素材下载</h2>
+                                <p>高清设计素材，欢迎下载收藏</p>
+                                <div className="download-grid">
+                                    <a href="/downloads/designs.zip" className="download-item">
+                                        <div className="download-icon">🎨</div>
+                                        <div className="download-info">
+                                            <h3>设计素材</h3>
+                                            <p>包含所有插图、艺术字设计</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="timeline-section">
+                        <div className="timeline-header">
+                            <h2>时间线</h2>
+                            <p>作品的故事，从这里开始</p>
+                        </div>
+                        <div className="timeline-container">
+                            {timelineData.map((item, index) => (
+                                <div key={index} className="timeline-item">
+                                    <div className="timeline-content">
+                                        <div className="timeline-year">{item.year}</div>
+                                        <div className="timeline-details">
+                                            <h2>{item.title}</h2>
+                                            <p>{item.description}</p>
+                                            {item.image && (
+                                                <div className="timeline-image">
+                                                    <img src={item.image} alt={item.title} />
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    <div className="footer-section" onClick={handleFooterClick}>
+                        <div className="footer-content">
+                            <div className="footer-text">
+                                <span className="footer-build">Build for CJW</span>
+                                <span className="footer-author">by 李昊</span>
+                                <span className="footer-year">2025</span>
+                            </div>
+                            <div className="footer-line"></div>
+                        </div>
                     </div>
                 </div>
+                <div className="hearts-container">
+                    {hearts.map(heart => (
+                        <div
+                            key={heart.id}
+                            className="heart"
+                            style={{
+                                left: `${heart.x}px`,
+                                top: `${heart.y}px`,
+                            }}
+                        >
+                            ❤️
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="hearts-container">
-                {hearts.map(heart => (
-                    <div
-                        key={heart.id}
-                        className="heart"
-                        style={{
-                            left: `${heart.x}px`,
-                            top: `${heart.y}px`,
-                        }}
-                    >
-                        ❤️
-                    </div>
-                ))}
-            </div>
-        </div>
+        </>
     );
 };
 

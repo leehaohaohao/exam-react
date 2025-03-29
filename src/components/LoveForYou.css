@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'LXGWWenKaiMono';
+    src: url('/font/LXGWWenKaiMono-Regular.ttf') format('truetype');
+}
+
 .love-container {
     width: 100vw;
     height: 100vh;
@@ -7,11 +12,12 @@
     padding: 2rem;
     background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
     overflow-y: auto;
+    font-family: 'LXGWWenKaiMono', sans-serif;
 }
 
 .love-section {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
     padding: 2rem;
@@ -20,7 +26,7 @@
     box-shadow: 0 10px 30px rgba(244, 143, 177, 0.2);
     transition: transform 0.5s ease;
     position: relative;
-    min-height: 500px;
+    min-height: min-content;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -30,6 +36,8 @@
     background: rgba(255, 255, 255, 0.9);
     min-height: 600px;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .love-intro-content {
@@ -37,32 +45,110 @@
     flex-direction: column;
     gap: 2rem;
     width: 100%;
+    position: relative;
+    z-index: 1;
 }
 
 .love-intro-section {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(244, 143, 177, 0.1);
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(244, 143, 177, 0.2);
+    transition: all 0.5s ease;
+    position: relative;
+    border: 1px solid rgba(244, 143, 177, 0.3);
+}
+
+.love-intro-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(244, 143, 177, 0.1), rgba(244, 143, 177, 0.05));
+    border-radius: 20px;
+    z-index: -1;
 }
 
 .love-intro-section:hover {
-    transform: translateX(10px);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(244, 143, 177, 0.3);
 }
 
 .love-intro-section h3 {
     color: #e91e63;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(244, 143, 177, 0.2);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.love-intro-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #e91e63, transparent);
+    border-radius: 3px;
 }
 
 .love-intro-section p {
-    color: #555;
-    font-size: 1.2rem;
+    color: #666;
+    font-size: 1.3rem;
     line-height: 2;
-    text-align: justify;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.love-intro-section p::before,
+.love-intro-section p::after {
+    content: '"';
+    position: absolute;
+    font-size: 4rem;
+    color: rgba(244, 143, 177, 0.3);
+    font-family: serif;
+}
+
+.love-intro-section p::before {
+    top: -20px;
+    left: -20px;
+}
+
+.love-intro-section p::after {
+    bottom: -40px;
+    right: -20px;
+    transform: rotate(180deg);
+}
+
+.love-section.love-intro .love-text-container h2 {
+    font-size: 3.5rem;
+    color: #e91e63;
+    text-align: left;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(244, 143, 177, 0.3);
+    position: relative;
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+.love-section.love-intro .love-text-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 2rem;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #e91e63, transparent);
+    border-radius: 2px;
 }
 
 .love-section.love-visible {
@@ -98,6 +184,10 @@
     opacity: 0;
     transform: translateX(50px);
     transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    min-height: 100%;
 }
 
 .love-section.love-visible .love-text-container {
@@ -146,6 +236,25 @@
 .love-section.love-top-text .love-text-container {
     transform: translateX(-50px);
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.love-section.love-top-text .word-cloud-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(244, 143, 177, 0.1);
+}
+
+.love-section.love-top-text .word-cloud-section h2 {
+    color: #e91e63;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(244, 143, 177, 0.3);
 }
 
 .love-section.love-top-text.love-visible .love-text-container {
@@ -156,19 +265,53 @@
 .love-section.love-overlay-text .love-image-container {
     max-width: 100%;
     width: 100%;
+    position: relative;
+    height: auto;
+    min-height: 800px;
 }
 
 .love-section.love-overlay-text .love-text-container {
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(to top, rgba(244, 143, 177, 0.9), transparent);
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(244, 143, 177, 0.7), rgba(244, 143, 177, 0.9));
     color: white;
-    padding: 2rem;
+    padding: 4rem;
     transform: translateX(100%);
-    border-radius: 0 0 15px 15px;
     transition: transform 1s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    gap: 1.5rem;
+}
+
+.love-section.love-overlay-text .love-text-container h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.love-section.love-overlay-text .love-text-container p {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-indent: 2em;
+}
+
+.love-section.love-overlay-text .love-text-container .signature {
+    margin-top: 2rem;
+    text-align: right;
+    width: 100%;
+    font-style: italic;
+    font-size: 1.2rem;
 }
 
 .love-section.love-overlay-text.love-visible .love-text-container {
@@ -187,4 +330,112 @@
     line-height: 2;
     color: #555;
     text-align: justify;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.word-cloud-section {
+    background: rgba(255, 255, 255, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    overflow: visible;
+}
+
+.word-cloud-section .love-text-container {
+    width: 100%;
+    text-align: center;
+    overflow: visible;
+}
+
+.word-cloud-section h2 {
+    margin-bottom: 2rem;
+    color: #e91e63;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(244, 143, 177, 0.3);
+}
+
+.transition-section {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(244, 143, 177, 0.1) 100%);
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.transition-content {
+    text-align: center;
+    z-index: 1;
+}
+
+.transition-text {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.transition-text h2 {
+    color: #e91e63;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(244, 143, 177, 0.3);
+}
+
+.transition-text p {
+    color: #666;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    line-height: 1.8;
+}
+
+.transition-decoration {
+    margin-top: 2rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards 0.5s;
+}
+
+.heart-divider {
+    width: 60px;
+    height: 60px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23e91e63'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E") no-repeat center;
+    background-size: contain;
+    margin: 0 auto;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
